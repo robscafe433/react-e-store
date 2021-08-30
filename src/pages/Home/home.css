@@ -1,7 +1,10 @@
 h1 {
-  margin: auto;
-  width: 50%;
-  border: 3px solid rgb(77, 49, 153);
-  padding: 10px;
-  text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(77, 49, 153);
+    padding: 10px;
+    text-align: center;
+}
+#main {
+    min-height: calc(100vh - 140px);
 }

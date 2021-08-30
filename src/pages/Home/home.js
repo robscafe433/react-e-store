@@ -1,17 +1,20 @@
 import "./home.css";
-import Navbar from "../../components/Navbar/navbar.js"
+import Navbar from "../../components/Navbar/navbar.js";
 
 import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
 
 function Home() {
     return (
-        <div>
-            <Navbar/>
-            <Banner />
-            <h1 className="hola">Hola Mundo</h1>
+        <body>
+            <header>
+                <Navbar />
+            </header>
+            <main id="main" className="container" role="main">
+                <Banner />
+            </main>
             <Footer />
-        </div>
+        </body>
     );
 }
 
