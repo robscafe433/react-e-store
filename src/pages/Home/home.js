@@ -4,7 +4,6 @@ import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
 import useFetch from "../../api/store";
 import {getCategories} from "../../helpers/storeHelpers";
-
 import Categories from "../../components/Categories/categories";
 
 function Home() {
