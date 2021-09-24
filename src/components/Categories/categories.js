@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React from "react";
 import catGroceries from "../../Images/CategoryImages/groceriesCard.jpg";
 import catHousehold from "../../Images/CategoryImages/householdCard.jpg";
