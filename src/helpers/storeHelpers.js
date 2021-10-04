@@ -5,7 +5,7 @@ export const getCategories = (storeData) => {
 }
 
 export const getCategoryProducts = (storeData, categoryInput) => {
-    if (Array.isArray(storeData)) {
+    if (Array.isArray(storeData) && categoryInput) {
         return storeData.filter((category) => categoryInput === category.category)[0].products;
     }
 }
