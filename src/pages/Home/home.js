@@ -15,6 +15,7 @@ function Home() {
                 <Banner />
                 <Categories />
             </div>
+            <Footer />
         </div>
     );
 }
