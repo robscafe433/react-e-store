@@ -11,9 +11,10 @@ function Home() {
     return (
         <div>
             <Navbar />
-            <Banner />
-            <Categories />
-            <Footer />
+            <div className="container">
+                <Banner />
+                <Categories />
+            </div>
         </div>
     );
 }
