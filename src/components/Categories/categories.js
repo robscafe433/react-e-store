@@ -9,7 +9,7 @@ const Categories = (props) => {
     return (
         <div className="album py-5 bg-light">
             <div className="container">
-                <div className="row justify-content-center">
+                <div className="row">
                     <div className="col-12 col-md-6 col-lg-4 px-4 px-md-3">
                         {/* <!-- cards 380 * 275 --> */}
                         <div className="card mb-4 box-shadow">
