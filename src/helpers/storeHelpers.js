@@ -4,6 +4,12 @@ export const getCategories = (storeData) => {
     }
 }
 
+export const getCategoriesImages = (storeData) => {
+    if (Array.isArray(storeData)) {
+        return storeData.map((category) => [category.category, category.categoryImage]);
+    }
+}
+
 export const getCategoryProducts = (storeData, categoryInput) => {
     if (Array.isArray(storeData) && categoryInput) {
         return storeData.filter((category) => categoryInput === category.category)[0].products;
@@ -18,3 +24,8 @@ export const getAllProducts = (storeData) => {
     }
 }
 
+export const getBanners = (storeResourceData) => {
+    if (Array.isArray(storeResourceData.banners)) {
+        return storeResourceData.banners;
+    }
+}
