@@ -2,7 +2,7 @@ import React from "react";
 import catGroceries from "../../Images/CategoryImages/groceriesCard.jpg";
 import catHousehold from "../../Images/CategoryImages/householdCard.jpg";
 import catGarden from "../../Images/CategoryImages/gardenCard.jpg";
-import "./categories.css"
+import "./categories.css";
 
 const Categories = (props) => {
     return (
