@@ -1,9 +1,9 @@
 .banner {
     position: relative;
     display: inline-block;
-    padding-bottom: 30px;
     width: 100%;
     height: 300px;
+    object-fit: cover;
 }
 
 .banner__textWrapper {
@@ -23,10 +23,10 @@
 
 /* no bigger than 400px  */
 @media screen and (max-width: 400px) {
-    .banner {
+    /* .banner {
         background-image: url("../../Images/CategoryImages/BannerImages/storebanner-sm.jpg");
         height: 320px;
-    }
+    } */
     .banner h1 {
         font-size: 3rem;
     }
@@ -34,10 +34,10 @@
 
 /* between 401 and 900 px */
 @media screen and (min-width: 401px) and (max-width: 900px) {
-    .banner {
+    /* .banner {
         background-image: url("../../Images/CategoryImages/BannerImages/storebanner-sm.jpg");
         height: 320px;
-    }
+    } */
     .banner h1 {
         font-size: 3.5rem;
     }
@@ -48,14 +48,14 @@
 
 /* between 901 and 1200 px */
 @media screen and (min-width: 901px) and (max-width: 1200px) {
-    .banner {
+    /* .banner {
         background-image: url("../../Images/CategoryImages/BannerImages/storebanner-lg.jpg");
-    }
+    } */
 }
 
 /* bigger than 1201 px */
 @media screen and (min-width: 1201px) {
-    .banner {
+    /* .banner {
         background-image: url("../../Images/CategoryImages/BannerImages/storebanner-xl.jpg");
-    }
+    } */
 }
