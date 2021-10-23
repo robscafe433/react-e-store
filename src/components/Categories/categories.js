@@ -3,7 +3,7 @@ import React from "react";
 import "./categories.css"
 import Category from "./Category";
 import useFetch from "../../api/store";
-import getCategoriesImages from "../../helpers/storeHelpers"
+import {getCategoriesImages} from "../../helpers/storeHelpers";
 
 function Categories() {
     let data = useFetch("http://localhost:3000/items");
