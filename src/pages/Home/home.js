@@ -1,5 +1,5 @@
 import "./home.css";
-import Navbar from "../../components/Navbar/navbar.js"
+import Navbar from "../../components/Navbar/navbar.js";
 import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
 import useFetch from "../../api/store";
@@ -12,9 +12,11 @@ function Home() {
     console.log(">>>getBanners", getBanners(useFetch('http://localhost:8000/storeResources')));
     return (
         <div>
-            <Navbar/>
-            <Banner />
-            <Categories/>
+            <Navbar />
+            <div className="container">
+                <Banner />
+                <Categories />
+            </div>
             <Footer />
         </div>
     );
