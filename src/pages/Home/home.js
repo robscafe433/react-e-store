@@ -7,15 +7,16 @@ import {getCategories, getCategoriesImages, getBanners} from "../../helpers/stor
 import Categories from "../../components/Categories/categories";
 
 function Home() {
-    console.log(">>>getCategories", getCategories(useFetch('http://localhost:8000/items')));
-    console.log(">>>getCategoriesImages", getCategoriesImages(useFetch('http://localhost:8000/items')));
-    console.log(">>>getBanners", getBanners(useFetch('http://localhost:8000/storeResources')));
+    const storeData = useFetch('http://localhost:8000/items');
+    console.log(">>>getCategories", getCategories(storeData));
+    console.log(">>>getCategoriesImages", getCategoriesImages(useFetch(storeData)));
+    console.log(">>>getBanners", getBanners(useFetch(storeData)));
     return (
         <div>
             <Navbar />
             <div className="container">
                 <Banner />
-                <Categories />
+                {/* <Categories storeData={storeData} /> */}
             </div>
             <Footer />
         </div>
