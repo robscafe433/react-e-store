@@ -5,19 +5,20 @@ import Footer from "../../components/Footer/footer";
 import useFetch from "../../api/store";
 import {getCategories, getCategoriesImages, getBanners} from "../../helpers/storeHelpers";
 import Categories from "../../components/Categories/categories";
+import Gallery from "../../components/Gallery/gallery"
 
 function Home() {
-    console.log(">>>getCategories", getCategories(useFetch('http://localhost:8000/items')));
-    console.log(">>>getCategoriesImages", getCategoriesImages(useFetch('http://localhost:8000/items')));
-    console.log(">>>getBanners", getBanners(useFetch('http://localhost:8000/storeResources')));
+    const storeData = useFetch('http://localhost:8000/items');
+    let page = "groceries";
     return (
         <div>
             <Navbar />
             <div className="container">
                 <Banner />
-                <Categories />
+                {/* <Categories storeData={storeData} /> */}
             </div>
             <Footer />
+            {/* <Gallery storeData={storeData} page={page} /> */}
         </div>
     );
 }
