@@ -9,13 +9,14 @@ import Gallery from "../../components/Gallery/gallery"
 
 function Home() {
     const storeData = useFetch('http://localhost:8000/items');
+    console.log("aaaaaa",storeData);
     let page = "groceries";
     return (
         <div>
             <Navbar />
             <div className="container">
                 <Banner />
-                {/* <Categories storeData={storeData} /> */}
+                <Categories storeData={storeData} />
             </div>
             <Footer />
             {/* <Gallery storeData={storeData} page={page} /> */}
