@@ -16,7 +16,7 @@ function Home() {
             <Navbar setPage={setPage} />
             <div className="container">
                 <Banner />
-                <Categories storeData={storeData} />
+                {page === 'home' ? <Categories storeData={storeData} /> : ""  }
             </div>
             <Footer />
             {page !== 'home' ? 
