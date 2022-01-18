@@ -5,23 +5,20 @@ import Footer from "../../components/Footer/footer";
 import useFetch from "../../api/store";
 import {getCategories, getCategoriesImages, getBanners} from "../../helpers/storeHelpers";
 import Categories from "../../components/Categories/categories";
-import Gallery from "../../components/Gallery/gallery"
+import Gallery from "../../components/Gallery/gallery";
 import { useState } from "react";
 
 function Home() {
-    const storeData = useFetch('http://localhost:8000/items');
-    const [page, setPage] = useState('home');
+    const storeData = useFetch("http://localhost:8000/items");
+    const [page, setPage] = useState("home");
     return (
         <div>
             <Navbar setPage={setPage} />
             <div className="container">
-                <Banner />
-                {page === 'home' ? <Categories storeData={storeData} /> : ""  }
+                <Banner /> {page === "home" ? <Categories storeData={storeData} /> : ""}
             </div>
+            {page !== "home" ? <Gallery storeData={storeData} page={page} /> : ""}
             <Footer />
-            {page !== 'home' ? 
-                <Gallery storeData={storeData} page={page} /> : ""
-            }
         </div>
     );
 }
