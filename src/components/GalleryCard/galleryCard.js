@@ -9,7 +9,7 @@ const GalleryCard = (props) => {
                 <div className="card-body">
                     <h5 className="card-title text-center">{product.name}</h5>
                     <p className="card-text text-center">${product.price.toFixed(2)}</p>
-                    <a className="add-cart" href="#" data-id={product.id} className="btn btn-primary">Add to Cart</a>  
+                    <a className="add-cart" href="/" data-id={product.id} className="btn btn-primary">Add to Cart</a>  
                 </div>
             </div>
     )

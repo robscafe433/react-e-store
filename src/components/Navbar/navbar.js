@@ -31,25 +31,25 @@ const Navbar = (props) => {
                         </li>
                         <li className="nav-item">
                             {/* // onclicks href needs react setup*/}
-                            <a className="nav-link" href="#" onClick={() => props.setPage('groceries')}>
+                            <a className="nav-link" href="/" onClick={() => props.setPage('groceries')}>
                                 Groceries
                             </a>
                         </li>
                         <li className="nav-item">
                             {/* // onclicks href needs react setup*/}
-                            <a className="nav-link" href="#">
+                            <a className="nav-link" href="/" onClick={() => props.setPage('household')}>
                                 Household
                             </a>
                         </li>
                         <li className="nav-item">
                             {/* // onclicks href needs react setup*/}
-                            <a className="nav-link" href="#">
+                            <a className="nav-link" href="/" onClick={() => props.setPage('garden')}>
                                 Garden
                             </a>
                         </li>
                         <li className="nav-item">
                             {/* // onclicks href needs react setup*/}
-                            <a className="nav-link" href="#">
+                            <a className="nav-link" href="/">
                                 Cart
                             </a>
                         </li>
@@ -57,7 +57,7 @@ const Navbar = (props) => {
 
                     <button
                         // onclicks href needs react setup
-                        // onclick="document.location.href='#'"
+                        // onclick="document.location.href='/'"
                         className="cart btn btn-outline-success my-2 my-sm-0"
                         type="submit"
                     >

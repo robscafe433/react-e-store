@@ -10,7 +10,7 @@ const Categories = (props) => {
     if (props.storeData) {
         let categoryImages = getCategoriesImages(props.storeData);
         categoryList = categoryImages.map((item, index) => {
-            return <Category key={index} item={item}/>;
+            return <Category key={index} item={item} setPage={props.setPage}/>;
         });
     }
     return (

@@ -17,7 +17,7 @@ const Category = (props) => {
                     src={props.item[1]}
                 />
                 <div className="image-overlay">
-                    <a href="#">
+                    <a href="/"  onClick={() => props.setPage(props.item[0])} >
                         <h3 className="card-hoverText">{titleCase(props.item[0])}</h3>
                     </a>
                 </div>
