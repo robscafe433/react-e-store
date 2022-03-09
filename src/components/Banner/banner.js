@@ -13,7 +13,7 @@ const Banner = (prop) => {
     /*-- XL- 1450 * 720 lg- 950 * 350 md- 992 * 576 sm- 768 * 576 --*/
 
     return (
-        <div >
+        <div className="banner__FirstDiv">
             <BannerImage />
 
             <div className="banner__textWrapper">
