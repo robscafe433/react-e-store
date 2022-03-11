@@ -6,9 +6,9 @@ const Navbar = (props) => {
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
         {/* href needs react setup*/}
-        <a className="navbar-brand" href="index.html">
+        <button  className="btn btn-link navbar-brand" href="index.html">
           Robert's One Stop Shop
-        </a>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,49 +25,49 @@ const Navbar = (props) => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               {/* href needs react setup*/}
-              <a
-                className="nav-link"
+              <button 
+                className="btn btn-link nav-link"
                 href="index.html"
                 onClick={() => props.setPage("home")}
               >
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </button>
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <a
-                className="nav-link"
+              <button 
+                className="btn btn-link nav-link"
                 href="#"
                 onClick={() => props.setPage("groceries")}
               >
                 Groceries
-              </a>
+              </button>
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <a
-                className="nav-link"
+              <button 
+                className="btn btn-link nav-link"
                 href="#"
                 onClick={() => props.setPage("household")}
               >
                 Household
-              </a>
+              </button>
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <a
-                className="nav-link"
+              <button 
+                className="btn btn-link nav-link"
                 href="#"
                 onClick={() => props.setPage("garden")}
               >
                 Garden
-              </a>
+              </button>
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <a className="nav-link" href="#">
+              <button  className="btn btn-link nav-link" href="#">
                 Cart
-              </a>
+              </button>
             </li>
           </ul>
 
