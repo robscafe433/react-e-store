@@ -6,7 +6,7 @@ const Navbar = (props) => {
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
         {/* href needs react setup*/}
-        <button  className="btn btn-link navbar-brand" href="index.html">
+        <button className="btn btn-link navbar-brand" href="index.html">
           Robert's One Stop Shop
         </button>
         <button
@@ -25,7 +25,7 @@ const Navbar = (props) => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               {/* href needs react setup*/}
-              <button 
+              <button
                 className="btn btn-link nav-link"
                 href="index.html"
                 onClick={() => props.setPage("home")}
@@ -35,7 +35,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <button 
+              <button
                 className="btn btn-link nav-link"
                 href="#"
                 onClick={() => props.setPage("groceries")}
@@ -45,7 +45,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <button 
+              <button
                 className="btn btn-link nav-link"
                 href="#"
                 onClick={() => props.setPage("household")}
@@ -55,7 +55,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <button 
+              <button
                 className="btn btn-link nav-link"
                 href="#"
                 onClick={() => props.setPage("garden")}
@@ -65,7 +65,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <button  className="btn btn-link nav-link" href="#">
+              <button className="btn btn-link nav-link" href="#">
                 Cart
               </button>
             </li>
