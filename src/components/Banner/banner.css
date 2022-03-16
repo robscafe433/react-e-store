@@ -6,11 +6,11 @@
   object-fit: cover;
 }
 
-.banner__FirstDiv {
+.banner-FirstDiv {
   position: relative;
 }
 
-.banner__textWrapper {
+.banner-textWrapper {
   top: 20%;
   left: 5%;
   width: 90%;
@@ -21,7 +21,8 @@
   text-shadow: 2px 2px 16px #666;
   font-family: robotobold, verdana, arial, helvetica, sans-serif;
 }
-.banner__title {
+
+.banner-title {
   font-size: 4.5rem;
 }
 
@@ -45,6 +46,7 @@
   .banner h1 {
     font-size: 3.5rem;
   }
+
   .top-center-container {
     top: 6%;
   }
