@@ -6,11 +6,11 @@
   object-fit: cover;
 }
 
-.banner-FirstDiv {
+.banner-first-div {
   position: relative;
 }
 
-.banner-textWrapper {
+.banner-text-wrapper {
   top: 20%;
   left: 5%;
   width: 90%;

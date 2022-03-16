@@ -13,10 +13,10 @@ const Banner = (prop) => {
   /*-- XL- 1450 * 720 lg- 950 * 350 md- 992 * 576 sm- 768 * 576 --*/
 
   return (
-    <div className="banner-FirstDiv">
+    <div className="banner-first-div">
       <BannerImage />
 
-      <div className="banner-textWrapper">
+      <div className="banner-text-wrapper">
         <h1 className="banner-title">Your one stop shop</h1>
         <h2>At a discount price</h2>
         <a href="/categories/all.html" className="btn btn-dark">
