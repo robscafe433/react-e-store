@@ -1,5 +1,6 @@
 import "./banner.css";
 import React from "react";
+import BannerImage from "./BannerImage";
 
 const Banner = (props) => {
   /*-- XL- 1450 * 720 lg- 950 * 350 md- 992 * 576 sm- 768 * 576 --*/

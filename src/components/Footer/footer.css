@@ -1,16 +1,18 @@
 .footer {
-    height: 70px;
-    padding: 1.5rem 0;
-    color: #999;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: 0.05rem solid #e5e5e5;
-    width: 100%;
-    margin-top: 20px;
+  height: 70px;
+  padding: 1.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 0.05rem solid #e5e5e5;
+  width: 100%;
+  margin-top: 20px;
 }
+
 .footer-content {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 /* .footer #scrollup {
     position: fixed;
     display: none;

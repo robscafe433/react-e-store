@@ -1,10 +1,10 @@
-import './footer.css';
+import "./footer.css";
 
 const Footer = () => {
-    return (
-        <footer className="footer">
-            <p className="footer-content">© 2020 Robert's One Stop Shop</p>
-            {/* <button
+  return (
+    <footer className="footer">
+      <p className="footer-content">© 2020 Robert's One Stop Shop</p>
+      {/* <button
                 type="button"
                 class="btn btn-dark"
                 onclick="topFunction()"
@@ -13,8 +13,8 @@ const Footer = () => {
             >
                 Back to top
             </button> */}
-        </footer>
-    )
-}
+    </footer>
+  );
+};
 
 export default Footer;
