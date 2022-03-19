@@ -1,7 +1,6 @@
 import React from "react";
 
 const Navbar = (props) => {
-    console.log(">>>navbarprops",props);
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
@@ -25,13 +24,13 @@ const Navbar = (props) => {
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
                             {/* href needs react setup*/}
-                            <a className="nav-link" href="index.html" onClick={() => props.setPage('home')}>
+                            <a className="nav-link" href="index.html">
                                 Home <span className="sr-only">(current)</span>
                             </a>
                         </li>
                         <li className="nav-item">
                             {/* // onclicks href needs react setup*/}
-                            <a className="nav-link" href="#" onClick={() => props.setPage('groceries')}>
+                            <a className="nav-link" href="#">
                                 Groceries
                             </a>
                         </li>
