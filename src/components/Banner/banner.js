@@ -4,10 +4,13 @@ import BannerImage from "./BannerImage";
 
 const Banner = (props) => {
   /*-- XL- 1450 * 720 lg- 950 * 350 md- 992 * 576 sm- 768 * 576 --*/
+
   return (
-    <div className="banner">
-      <div className="banner__textWrapper">
-        <h1 className="banner__title">Your one stop shop</h1>
+    <div className="banner-first-div">
+      <BannerImage />
+
+      <div className="banner-text-wrapper">
+        <h1 className="banner-title">Your one stop shop</h1>
         <h2>At a discount price</h2>
         <button className="btn btn-dark" onClick={() => props.setPage("all")}>
           View All Items
