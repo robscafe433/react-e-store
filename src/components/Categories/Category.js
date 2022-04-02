@@ -1,7 +1,7 @@
 import React from "react";
 
 const Category = (props) => {
-  console.log("propsinchild", props.item[0]);
+  // console.log("propsinchild", props.item[0]);
   function titleCase(str) {
     return str.toLowerCase().replace(/\b(\w)/g, (s) => s.toUpperCase());
   }

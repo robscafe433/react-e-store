@@ -4,8 +4,7 @@ import Category from "./Category";
 import { getCategoriesImages } from "../../helpers/storeHelpers";
 
 const Categories = (props) => {
-  console.log("log_props", props);
-
+  // console.log("log_props", props);
   let categoryList = [];
   if (props.storeData) {
     let categoryImages = getCategoriesImages(props.storeData);

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Navbar = (props) => {
-  console.log(">>>navbarprops", props);
+  // console.log(">>>navbarprops", props);
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
