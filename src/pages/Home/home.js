@@ -5,7 +5,6 @@ import Footer from "../../components/Footer/footer";
 import useFetch from "../../api/store";
 import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
-import AllGallery from "../../components/Gallery/allGallery";
 
 import { useState } from "react";
 
@@ -23,12 +22,7 @@ function Home() {
           ""
         )}
       </div>
-      {page !== "home" && page !== "all" ? (
-        <Gallery storeData={storeData} page={page} />
-      ) : (
-        ""
-      )}
-      {page === "all" ? <AllGallery storeData={storeData} page={page} /> : ""}
+      {page !== "home" ? <Gallery storeData={storeData} page={page} /> : ""}
       <Footer />
     </div>
   );
