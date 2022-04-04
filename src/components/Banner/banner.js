@@ -14,6 +14,7 @@ const Banner = (prop) => {
 
   return (
     <div className="banner-first-div">
+      {console.log("### In Banner component")}
       <BannerImage />
 
       <div className="banner-text-wrapper">

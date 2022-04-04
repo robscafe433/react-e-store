@@ -12,7 +12,11 @@ const Gallery = (props) => {
     });
   }
 
-  return <div className="gallery">{galleryCards}</div>;
+  return (
+      <div className="gallery">
+        {galleryCards} {console.log("In Gallery component")}
+    </div>
+  );
 };
 
 export default Gallery;
