@@ -13,9 +13,7 @@ const ShoppingCartDescription = () => {
         </div>
       </div>
       <div className="row mx-2 pt-4 border-bott cart-Display">
-        <div className="align-self-center">
-          <h4></h4>
-        </div>
+        <div className="align-self-center"></div>
       </div>
     </div>
   );

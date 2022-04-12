@@ -20,7 +20,7 @@ const Summary = () => {
       <div className="row pb-5">
         <div className="col-12 px-5 align-self-center">
           <div className="form-group">
-            <label for="SHIPPING">SHIPPING</label>
+            <label htmlFor="SHIPPING">SHIPPING</label>
             <select className="form-control" id="exampleFormControlSelect1">
               <option value="null">Select shipping option</option>
               <option value="0">5-6 Business Days - Free</option>
@@ -42,7 +42,7 @@ const Summary = () => {
       <div className="row m-4">
         <div className="col-12 text-center">
           <button
-            onclick="document.location.href='./thankyou.html'"
+            onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
           >
