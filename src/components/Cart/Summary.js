@@ -42,7 +42,7 @@ const Summary = () => {
       <div className="row m-4">
         <div className="col-12 text-center">
           <button
-            onClick="document.location.href='./thankyou.html'"
+            // onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
           >
