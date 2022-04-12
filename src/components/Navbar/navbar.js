@@ -79,7 +79,7 @@ const Navbar = (props) => {
             // onclicks href needs react setup
             // onclick="document.location.href='/'"
             className="cart btn btn-outline-success my-2 my-sm-0"
-            type="submit"
+            type="submit" 
             onClick={() => props.setPage("cart")}
           >
             Cart <span>0</span>
