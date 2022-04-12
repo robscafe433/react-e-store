@@ -1,14 +1,14 @@
 import React from "react";
 
 const Navbar = (props) => {
+  // console.log(">>>navbarprops", props);
   return (
     <header>
-      {console.log("###  In Nav Component  ")}
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
         {/* href needs react setup*/}
-        <a className="navbar-brand" href="index.html">
+        <button className="btn btn-link navbar-brand" href="index.html">
           Robert's One Stop Shop
-        </a>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -65,11 +65,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <button
-                className="btn btn-link nav-link"
-                href="#"
-                onClick={() => props.setPage("cart")}
-              >
+              <button className="btn btn-link nav-link" href="#">
                 Cart
               </button>
             </li>
@@ -77,7 +73,7 @@ const Navbar = (props) => {
 
           <button
             // onclicks href needs react setup
-            // onclick="document.location.href='#'"
+            // onclick="document.location.href='/'"
             className="cart btn btn-outline-success my-2 my-sm-0"
             type="submit"
           >

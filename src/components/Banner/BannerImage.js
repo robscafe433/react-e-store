@@ -11,23 +11,21 @@ const BannerImage = () => {
   if (windowWidthPixels <= 1000) {
     console.log("pixels are LESS than 1k");
     return (
-      <>
-        <img src={bannerImagePic} alt="banner pic" className="banner" />
-        {console.log("### Inside BannerImage component ")}
-      </>
-
+      <img src={bannerImagePic} alt="banner pic" className="banner" />
       // <div>
-      //    {console.log("Inside BannerImage component")}
+      //     {console.log("Inside BannerImage component")}
       //     {console.log("This is line two")};{bannerImagePic}
       // </div>
     );
   } else if (windowWidthPixels > 1000) {
+    console.log("pixels are way MORE than 1k");
     return (
-      <>
-        <img src={bannerImagePic} alt="banner pic" className="banner" />
-        {console.log("### Inside BannerImage component ")}
-        {console.log("2 -pixels are way MORE than 1k")}
-      </>
+      <img src={bannerImagePic} alt="banner pic" className="banner" />
+
+      // <div>
+      //     {console.log("Inside BannerImage component")}
+      //     {console.log("This is line two")};{bannerImagePic}
+      // </div>
     );
   }
 };
