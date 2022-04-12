@@ -1,8 +1,19 @@
 import React from "react";
+import ShoppingCartDescription from "../../components/Cart//ShoppingCartDescription";
+import Summary from "../../components/Cart/Summary";
+import "./Checkout.css";
 
-const Checkout = () => {
-  console.log("%%%  Now inside checkout page");
-  return <div>"Testing 123"</div>;
+const CheckoutPage = (props) => {
+  return (
+    <div className="main-cart album py-5 bg-light rounded">
+      <div className="cart-body container rounded white">
+        <div className="row">
+          <ShoppingCartDescription />
+          <Summary />
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Checkout;
+export default CheckoutPage;
