@@ -1,9 +1,9 @@
 .left-panel {
-    justify-content: center;
+  justify-content: center;
 }
 
 .left-panel .small-bold-letters {
-    font-size: 11px;
-    font-weight: 750;
-    color: rgb(120, 122, 122);
+  font-size: 11px;
+  font-weight: 750;
+  color: rgb(120, 122, 122);
 }
