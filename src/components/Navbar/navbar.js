@@ -65,7 +65,11 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               {/* // onclicks href needs react setup*/}
-              <button className="btn btn-link nav-link" href="#">
+              <button
+                className="btn btn-link nav-link"
+                href="#"
+                onClick={() => props.setPage("cart")}
+              >
                 Cart
               </button>
             </li>
@@ -75,7 +79,8 @@ const Navbar = (props) => {
             // onclicks href needs react setup
             // onclick="document.location.href='/'"
             className="cart btn btn-outline-success my-2 my-sm-0"
-            type="submit"
+            type="submit" 
+            onClick={() => props.setPage("cart")}
           >
             Cart <span>0</span>
           </button>

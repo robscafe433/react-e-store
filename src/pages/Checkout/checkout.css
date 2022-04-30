@@ -1,0 +1,23 @@
+.main-cart {
+  min-height: calc(100vh - 160px);
+}
+
+.box-shadow-class {
+  box-shadow: 0 6px 20px 0 rgba(0 0 0 19%);
+  border: transparent;
+}
+
+.cart-body {
+  box-shadow: 0 6px 20px 0 rgba(0 0 0 19%);
+  border: transparent;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-cart .cart-body {
+    max-width: 1500px;
+  }
+}
