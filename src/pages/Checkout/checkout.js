@@ -3,7 +3,7 @@ import ShoppingCartDescription from "../../components/Cart/ShoppingCartDescripti
 import Summary from "../../components/Cart/Summary";
 import "./Checkout.css";
 
-const CheckoutPage = (props) => {
+const Checkout = (props) => {
   return (
     <div className="main-cart album py-5 bg-light rounded">
       <div className="cart-body container rounded white">
@@ -16,4 +16,4 @@ const CheckoutPage = (props) => {
   );
 };
 
-export default CheckoutPage;
+export default Checkout;
