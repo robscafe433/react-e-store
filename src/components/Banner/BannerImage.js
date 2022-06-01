@@ -18,7 +18,6 @@ const BannerImage = () => {
       // </div>
     );
   } else if (windowWidthPixels > 1000) {
-    console.log("pixels are way MORE than 1k");
     return (
       <img src={bannerImagePic} alt="banner pic" className="banner" />
 

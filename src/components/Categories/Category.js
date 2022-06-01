@@ -12,7 +12,7 @@ const Category = (props) => {
         <img alt="images" className="card-hoverImg" src={props.item[1]} />
         <button
           className="image-overlay"
-          onClick={() => props.setPage(props.item[0])}
+          onClick={() => props.setPage(props.item[0])} // this returns: groceries, garden, household -rs
         >
           <h3 className="card-hoverText mx-auto">{titleCase(props.item[0])}</h3>
         </button>
