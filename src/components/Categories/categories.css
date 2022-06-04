@@ -10,7 +10,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,14 +32,13 @@
 @media screen and (max-width: 1024px) {
   .image-overlay {
     opacity: 1;
-    background: rgba(0 0 0 / 0.4);
+    background: rgba(0 0 0 / 40%);
   }
 }
 
 /* no bigger than 400px  */
 @media screen and (max-width: 400px) {
-
   h3.card-hovertext {
-    font-size: calc(2.25rem - .75vw);
+    font-size: calc(2.25rem - 0.75vw);
   }
 }
