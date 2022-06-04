@@ -1,18 +1,18 @@
-import {useState} from 'react';
+import { useState } from "react";
 import "./thankyoubottomrightpanel.css";
-import confetti from './confetti.json';
-import Lottie from 'react-lottie';
+import confetti from "./confetti.json";
+import Lottie from "react-lottie";
 
 function ThankYouBottomRightPanel() {
   const [startConfetti, setConfetti] = useState(false);
 
   const defaultOptions = {
     loop: false,
-    autoplay: true, 
+    autoplay: true,
     animationData: confetti,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (
@@ -41,12 +41,16 @@ function ThankYouBottomRightPanel() {
       <br />
       <br />
       <br />
-      {startConfetti && <Lottie 
-        options={defaultOptions}
-        height={400}
-        width={444}
-      />}
-      <button className="btn-lg btn-primary btn-virtual-gift" id="button1" onClick={() => {setConfetti(!startConfetti)}}>
+      {startConfetti && (
+        <Lottie options={defaultOptions} height={400} width={444} />
+      )}
+      <button
+        className="btn-lg btn-primary btn-virtual-gift"
+        id="button1"
+        onClick={() => {
+          setConfetti(!startConfetti);
+        }}
+      >
         Click for Virtual Gift
       </button>
     </div>

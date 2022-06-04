@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-[role=button][aria-label=animation] {
+[role="button"][aria-label="animation"] {
   width: 444px;
   position: absolute;
   top: 70px;

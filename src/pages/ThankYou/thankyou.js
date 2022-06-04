@@ -35,6 +35,6 @@ const ThankYou = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default ThankYou;
