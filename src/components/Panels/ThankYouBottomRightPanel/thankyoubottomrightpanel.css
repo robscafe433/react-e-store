@@ -1,3 +1,10 @@
 .bottom-right-panel {
   text-align: center;
 }
+
+[role=button][aria-label=animation] {
+  width: 444px;
+  position: absolute;
+  top: 70px;
+  pointer-events: none;
+}
