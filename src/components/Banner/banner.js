@@ -9,7 +9,7 @@ const Banner = (props) => {
     <div className="banner-first-div">
       <BannerImage />
 
-      <div className="banner-text-wrapper">
+      <div className="banner-text-wrapper top-center-container ">
         <h1 className="banner-title">Your one stop shop</h1>
         <h2>At a discount price</h2>
         <button className="btn btn-dark" onClick={() => props.setPage("all")}>
