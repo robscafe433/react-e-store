@@ -28,10 +28,7 @@
 
 /* no bigger than 400px  */
 @media screen and (max-width: 400px) {
-  .banner {
-    background-image: url("../../Images/CategoryImages/BannerImages/storebanner-sm.jpg");
-    height: 320px;
-  }
+
   .banner-text-wrapper h1.banner-title {
     font-size: calc(2.25rem - 1.5vw);
   }
