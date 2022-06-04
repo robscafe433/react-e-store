@@ -34,3 +34,11 @@
     background: rgba(0, 0, 0, 0.4);
   }
 }
+
+/* no bigger than 400px  */
+@media screen and (max-width: 400px) {
+
+  h3.card-hoverText {
+    font-size: calc(2.25rem - .75vw);
+  }
+}
