@@ -18,10 +18,12 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
+
 .image-overlay:hover {
   opacity: 1;
 }
-.card-hoverText {
+
+.card-hovertext {
   font-size: 3rem;
   font-weight: bold;
   color: #dcdcdc;
@@ -31,14 +33,14 @@
 @media screen and (max-width: 1024px) {
   .image-overlay {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0 0 0 / 0.4);
   }
 }
 
 /* no bigger than 400px  */
 @media screen and (max-width: 400px) {
 
-  h3.card-hoverText {
+  h3.card-hovertext {
     font-size: calc(2.25rem - .75vw);
   }
 }
