@@ -14,7 +14,7 @@ const Category = (props) => {
           className="image-overlay"
           onClick={() => props.setPage(props.item[0])} // this returns: groceries, garden, household -rs
         >
-          <h3 className="card-hoverText mx-auto">{titleCase(props.item[0])}</h3>
+          <h3 className="card-hovertext mx-auto">{titleCase(props.item[0])}</h3>
         </button>
       </div>
     </div>

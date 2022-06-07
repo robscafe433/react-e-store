@@ -1,0 +1,9 @@
+.top-right-panel {
+  text-align: center;
+  margin: auto;
+}
+
+.top-right-panel ion-icon {
+  font-size: 5em;
+  color: rgb(44 182 55);
+}
