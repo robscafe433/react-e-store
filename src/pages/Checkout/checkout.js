@@ -4,11 +4,12 @@ import Summary from "../../components/Cart/Summary";
 import "./Checkout.css";
 
 const Checkout = (props) => {
+  const { cartItems } = props;
   return (
     <div className="main-cart album py-5 bg-light rounded">
       <div className="cart-body container rounded white">
         <div className="row">
-          <ShoppingCartDescription />
+          <ShoppingCartDescription cartItems={cartItems} />
           <Summary />
         </div>
       </div>

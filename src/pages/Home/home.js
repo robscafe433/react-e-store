@@ -7,7 +7,7 @@ import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
 
 import { useState } from "react";
-import Checkout from "../checkout/Checkout.js";
+import Checkout from "../checkout/Checkout";
 
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
@@ -32,7 +32,7 @@ function Home() {
   return (
     <div>
       <Navbar setPage={setPage} />
-      {page === "cart" ? <Checkout /> : ""}
+      {page === "cart" ? <Checkout cartItems={cartItems} /> : ""}
       <div className="container">
         {page !== "cart" ? <Banner setPage={setPage} /> : ""}
         {page === "home" ? (
