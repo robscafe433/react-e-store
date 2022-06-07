@@ -13,8 +13,6 @@ function Home() {
   const storeData = useFetch("http://localhost:8000/items");
   const [page, setPage] = useState("home");
 
-  // ---------------------My Code------------------------------
-
   const [cartItems, setCartItems] = useState([]);
 
   const onAdd = (product) => {
@@ -30,8 +28,6 @@ function Home() {
       setCartItems([...cartItems, { ...product, inCart: 1 }]);
     }
   };
-
-  // ------------------  End My Code -----------------------------
 
   return (
     <div>
