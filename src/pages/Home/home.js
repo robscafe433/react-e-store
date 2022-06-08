@@ -32,7 +32,7 @@ function Home() {
   return (
     <div>
       <Navbar setPage={setPage} />
-      {page === "cart" ? <Checkout cartItems={cartItems} /> : ""}
+      {page === "cart" ? <Checkout cartItems={cartItems} onAdd={onAdd} /> : ""}
       <div className="container">
         {page !== "cart" ? <Banner setPage={setPage} /> : ""}
         {page === "home" ? (

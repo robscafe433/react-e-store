@@ -2,7 +2,7 @@ import React from "react";
 import "./ShoppingCartDescription.css";
 
 const ShoppingCartDescription = (props) => {
-  const { cartItems } = props;
+  const { cartItems, onAdd } = props;
   return (
     <div className="col-lg-8 white">
       <div className="row mx-2 my-2 p-3 pb-9 border-bottom border-secondary">
@@ -18,14 +18,47 @@ const ShoppingCartDescription = (props) => {
           {cartItems.length === 0 && <div>Cart is Empty</div>}
           {cartItems.map((x) => (
             <div key={x.id} className="row">
-              <div className="col-3">
+              <div className="col-1">
                 {" "}
-                <img src={x.image} max-width="2px" height="20"></img>
+                <img src={x.image} width="40" height="25"></img>
               </div>
 
-              <div className="col-3">{x.name}</div>
-              <div className="col-3">$ {x.price.toFixed(2)}</div>
-              <div className="col-3">{x.inCart}</div>
+              <h4 className="col-2">{x.name}</h4>
+              <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
+                <div className="input-group w-75 px-1 mt-n3">
+                  <div className="input-group-prepend">
+                    <button
+                      className="btn btn-outline-secondary px-2 subtract-btn"
+                      data-id={x.id}
+                      data-name={x.name}
+                      type="button"
+                    >
+                      -
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Qty"
+                    value={x.inCart}
+                    aria-label="Quantity"
+                    aria-describedby="basic-addon1"
+                  />
+                  <div className="input-group-prepend">
+                    <button
+                      className="btn btn-outline-secondary px-2 add-btn"
+                      data-id={x.id}
+                      data-name={x.name}
+                      onClick={() => onAdd(x)}
+                      type="button"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <h4 className="col-2">@ {x.price.toFixed(2)}</h4>
+              <h4 className="col-2">{x.inCart}</h4>
             </div>
           ))}
         </div>
