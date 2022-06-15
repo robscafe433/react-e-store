@@ -5,3 +5,12 @@
 .cartImagesSize{
   size: 10%;
 }
+
+.delete-button{
+  size: 10%;
+  height: 2rem;
+  width: 2rem;
+  font-size: large;
+  text-align: center;
+  border-radius: 50%;
+}

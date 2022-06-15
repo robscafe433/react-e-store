@@ -60,7 +60,9 @@ const ShoppingCartDescription = (props) => {
                 </div>
               </div>
               <h4 className="col-2">@ {x.price.toFixed(2)}</h4>
-              <button onClick={() => onDelete(x)}>x</button>
+              <button className="delete-button" onClick={() => onDelete(x)}>
+                x
+              </button>
               {/* <h4 className="col-2">{x.inCart}</h4> // insert code here */}
             </div>
           ))}
