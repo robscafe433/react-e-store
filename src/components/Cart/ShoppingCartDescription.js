@@ -2,8 +2,8 @@ import React from "react";
 import "./ShoppingCartDescription.css";
 
 const ShoppingCartDescription = (props) => {
-  const { cartItems, onAdd, onRemove } = props;
-  
+  const { cartItems, onAdd, onRemove, onDelete } = props;
+
   return (
     <div className="col-lg-8 white">
       <div className="row mx-2 my-2 p-3 pb-9 border-bottom border-secondary">
@@ -23,7 +23,6 @@ const ShoppingCartDescription = (props) => {
                 {" "}
                 <img src={x.image} width="40" height="25"></img>
               </div>
-
               <h4 className="col-2">{x.name}</h4>
               <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
                 <div className="input-group w-75 px-1 mt-n3">
@@ -61,7 +60,8 @@ const ShoppingCartDescription = (props) => {
                 </div>
               </div>
               <h4 className="col-2">@ {x.price.toFixed(2)}</h4>
-              <h4 className="col-2">{x.inCart}</h4>
+              <button onClick={() => onDelete(x)}>x</button>
+              {/* <h4 className="col-2">{x.inCart}</h4> // insert code here */}
             </div>
           ))}
         </div>

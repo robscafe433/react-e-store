@@ -43,11 +43,24 @@ function Home() {
     }
   };
 
+  const onDelete = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+
+    if (exist) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    }
+    console.log("CartItems is now: ", cartItems);
+  };
   return (
     <div>
       <Navbar setPage={setPage} />
       {page === "cart" ? (
-        <Checkout cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />
+        <Checkout
+          cartItems={cartItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          onDelete={onDelete}
+        />
       ) : (
         ""
       )}
