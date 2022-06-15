@@ -29,10 +29,28 @@ function Home() {
     }
   };
 
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+
+    if (exist.inCart === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, inCart: exist.inCart - 1 } : x
+        )
+      );
+    }
+  };
+
   return (
     <div>
       <Navbar setPage={setPage} />
-      {page === "cart" ? <Checkout cartItems={cartItems} onAdd={onAdd} /> : ""}
+      {page === "cart" ? (
+        <Checkout cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />
+      ) : (
+        ""
+      )}
       <div className="container">
         {page !== "cart" ? <Banner setPage={setPage} /> : ""}
         {page === "home" ? (

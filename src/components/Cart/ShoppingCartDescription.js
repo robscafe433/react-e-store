@@ -2,7 +2,7 @@ import React from "react";
 import "./ShoppingCartDescription.css";
 
 const ShoppingCartDescription = (props) => {
-  const { cartItems, onAdd } = props;
+  const { cartItems, onAdd, onRemove } = props;
   return (
     <div className="col-lg-8 white">
       <div className="row mx-2 my-2 p-3 pb-9 border-bottom border-secondary">
@@ -31,19 +31,21 @@ const ShoppingCartDescription = (props) => {
                       className="btn btn-outline-secondary px-2 subtract-btn"
                       data-id={x.id}
                       data-name={x.name}
+                      onClick={() => onRemove(x)}
                       type="button"
                     >
                       -
                     </button>
                   </div>
-                  <input
+                  <div
                     type="text"
                     className="form-control"
                     placeholder="Qty"
-                    value={x.inCart}
                     aria-label="Quantity"
                     aria-describedby="basic-addon1"
-                  />
+                  >
+                    {x.inCart}
+                  </div>
                   <div className="input-group-prepend">
                     <button
                       className="btn btn-outline-secondary px-2 add-btn"
