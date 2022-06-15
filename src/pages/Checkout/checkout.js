@@ -14,7 +14,7 @@ const Checkout = (props) => {
             onAdd={onAdd}
             onRemove={onRemove}
           />
-          <Summary />
+          <Summary cartItems={cartItems} />
         </div>
       </div>
     </div>

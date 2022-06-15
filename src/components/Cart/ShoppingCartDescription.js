@@ -3,6 +3,7 @@ import "./ShoppingCartDescription.css";
 
 const ShoppingCartDescription = (props) => {
   const { cartItems, onAdd, onRemove } = props;
+  
   return (
     <div className="col-lg-8 white">
       <div className="row mx-2 my-2 p-3 pb-9 border-bottom border-secondary">

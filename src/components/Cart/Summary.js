@@ -1,7 +1,18 @@
 import React from "react";
 import "./Summary.css";
 
-const Summary = () => {
+const Summary = (props) => {
+  const { cartItems } = props;
+
+  const totalCartItems = cartItems.reduce((a, c) => a + c.inCart, 0); //a is accumulator, c is current count
+  const runningItemsBalance = cartItems.reduce(
+    (a, c) => a + c.inCart * c.price,
+    0
+  );
+  {
+    console.log("**** This is the running balance : ", runningItemsBalance);
+  }
+
   return (
     <div className="col-12 col-md-5 col-lg-4 blk">
       <div className="row mx-2 p-3 pb-5 border-bottom border-secondary">
@@ -11,10 +22,14 @@ const Summary = () => {
       </div>
       <div className="row">
         <div className="col-8 mr-8rem col-md-8">
-          <p className="p-4 totalNumberItemsDisplayRightSide">Items 4</p>
+          <p className="p-4 totalNumberItemsDisplayRightSide">
+            Items {totalCartItems}
+          </p>
         </div>
         <div className="col-4">
-          <p className="p-4 totalItemsAmountDisplay">$200</p>
+          <p className="p-4 totalItemsAmountDisplay">
+            ${runningItemsBalance.toFixed(2)}
+          </p>
         </div>
       </div>
       <div className="row pb-5">

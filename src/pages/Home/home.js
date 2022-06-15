@@ -7,7 +7,7 @@ import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
 
 import { useState } from "react";
-import Checkout from "../checkout/Checkout";
+import Checkout from "../checkout/checkout";
 
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
