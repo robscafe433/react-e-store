@@ -1,17 +1,53 @@
 import React from "react";
+import { useState } from "react";
+
 import "./Summary.css";
+import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
   const { cartItems } = props;
+  const [shippingCost, setShippingCost] = useState("0");
+  const grandTotal = "";
 
   const totalCartItems = cartItems.reduce((a, c) => a + c.inCart, 0); //a is accumulator, c is current count
   const runningItemsBalance = cartItems.reduce(
     (a, c) => a + c.inCart * c.price,
     0
   );
+  let toFixedRunningBalance = runningItemsBalance.toFixed(2);
+  const parsedRunningBalnace = parseFloat(toFixedRunningBalance);
+  // let toFixedRunningBalance = runningItemsBalance.toFixed(2);
+  //
+
+  const parseFloatShippingCost = parseFloat(shippingCost);
+
+  const GrandTotal = parsedRunningBalnace + parseFloatShippingCost;
   {
-    console.log("**** This is the running balance : ", runningItemsBalance);
+    console.log(
+      "The new toFixedRunningBalnace is : ",
+      parsedRunningBalnace,
+      typeof parsedRunningBalnace
+    );
   }
+  {
+    console.log(
+      "The new parseFloatShippingCost is : ",
+      parseFloatShippingCost,
+      typeof parseFloatShippingCost
+    );
+  }
+  {
+    console.log("This is the GrandTotal : ", GrandTotal);
+  }
+
+  {
+    console.log(
+      "This is typeof shippingCost before parsing : ",
+      typeof shippingCost
+    );
+  }
+
+  //
 
   return (
     <div className="col-12 col-md-5 col-lg-4 blk">
@@ -28,7 +64,7 @@ const Summary = (props) => {
         </div>
         <div className="col-4">
           <p className="p-4 totalItemsAmountDisplay">
-            ${runningItemsBalance.toFixed(2)}
+            ${toFixedRunningBalance}
           </p>
         </div>
       </div>
@@ -36,13 +72,7 @@ const Summary = (props) => {
         <div className="col-12 px-5 align-self-center">
           <div className="form-group">
             <label htmlFor="SHIPPING">SHIPPING</label>
-            <select className="form-control" id="exampleFormControlSelect1">
-              <option value="null">Select shipping option</option>
-              <option value="0">5-6 Business Days - Free</option>
-              <option value="13.98">3-4 Business Days - $13.98</option>
-              <option value="22.98">2 Business Days - $22.98</option>
-              <option value="32.98">1 Business Days - $32.98</option>
-            </select>
+            <ShippingCost setShippingCost={setShippingCost} />
           </div>
         </div>
       </div>
@@ -51,7 +81,7 @@ const Summary = (props) => {
           <p className="p-1">TOTAL PRICE</p>
         </div>
         <div className="col-3">
-          <p className="p-1 grandTotalAmountDisplay">$0</p>
+          <p className="p-1 grandTotalAmountDisplay">${GrandTotal}</p>
         </div>
       </div>
       <div className="row m-4">

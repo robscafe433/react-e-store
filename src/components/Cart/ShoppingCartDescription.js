@@ -1,5 +1,6 @@
 import React from "react";
 import "./ShoppingCartDescription.css";
+import "./ShippingCost";
 
 const ShoppingCartDescription = (props) => {
   const { cartItems, onAdd, onRemove, onDelete } = props;
