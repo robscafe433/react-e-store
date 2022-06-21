@@ -1,7 +1,7 @@
 import React from "react";
 import ShoppingCartDescription from "../../components/Cart/ShoppingCartDescription";
 import Summary from "../../components/Cart/Summary";
-import "./Checkout.css";
+import "./checkout.css";
 
 const Checkout = (props) => {
   const { cartItems, onAdd, onRemove, onDelete } = props;
