@@ -81,7 +81,9 @@ const Summary = (props) => {
           <p className="p-1">TOTAL PRICE</p>
         </div>
         <div className="col-3">
-          <p className="p-1 grandTotalAmountDisplay">${GrandTotal}</p>
+          <p className="p-1 grandTotalAmountDisplay">
+            ${GrandTotal.toFixed(2)}
+          </p>
         </div>
       </div>
       <div className="row m-4">
