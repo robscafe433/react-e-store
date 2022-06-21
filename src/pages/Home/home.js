@@ -7,7 +7,7 @@ import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
 
 import { useState } from "react";
-import Checkout from "../checkout/checkout";
+import Checkout from "../Checkout/checkout";
 import ThankYou from "../ThankYou/thankyou";
 
 function Home() {
