@@ -5,7 +5,8 @@ import "./Summary.css";
 import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
-  const { cartItems } = props;
+  const { cartItems, setPage } = props;
+
   const [shippingCost, setShippingCost] = useState("0");
   const grandTotal = "";
 
@@ -92,6 +93,7 @@ const Summary = (props) => {
             // onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
+            onClick={() => props.setPage("thankyou")}
           >
             Checkout
           </button>

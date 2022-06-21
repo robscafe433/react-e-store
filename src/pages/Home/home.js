@@ -8,6 +8,7 @@ import Gallery from "../../components/Gallery/gallery";
 
 import { useState } from "react";
 import Checkout from "../checkout/checkout";
+import ThankYou from "../ThankYou/thankyou";
 
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
@@ -51,6 +52,7 @@ function Home() {
     }
     console.log("CartItems is now: ", cartItems);
   };
+
   return (
     <div>
       <Navbar setPage={setPage} />
@@ -60,24 +62,34 @@ function Home() {
           onAdd={onAdd}
           onRemove={onRemove}
           onDelete={onDelete}
+          setPage={setPage}
         />
       ) : (
         ""
       )}
       <div className="container">
-        {page !== "cart" ? <Banner setPage={setPage} /> : ""}
+        {page !== "cart" && page !== "thankyou" ? (
+          <Banner setPage={setPage} />
+        ) : (
+          ""
+        )}
         {page === "home" ? (
           <Categories storeData={storeData} setPage={setPage} /> // onAdd={onAdd}
         ) : (
           ""
         )}
       </div>
-      {page !== "home" && page !== "cart" ? (
+      {page !== "home" && page !== "cart" && page !== "thankyou" ? (
         <Gallery storeData={storeData} page={page} onAdd={onAdd} />
       ) : (
         ""
       )}
-      {console.log("This is cartItems: ", cartItems)}
+      {page !== "home" && page !== "cart" && page === "thankyou" ? (
+        <ThankYou setPage={setPage} />
+      ) : (
+        ""
+      )}
+
       <Footer />
     </div>
   );

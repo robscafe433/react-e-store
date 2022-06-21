@@ -4,7 +4,7 @@ import Summary from "../../components/Cart/Summary";
 import "./checkout.css";
 
 const Checkout = (props) => {
-  const { cartItems, onAdd, onRemove, onDelete } = props;
+  const { cartItems, onAdd, onRemove, onDelete, setPage } = props;
   return (
     <div className="main-cart album py-5 bg-light rounded">
       <div className="cart-body container rounded white">
@@ -15,7 +15,7 @@ const Checkout = (props) => {
             onRemove={onRemove}
             onDelete={onDelete}
           />
-          <Summary cartItems={cartItems} />
+          <Summary cartItems={cartItems} setPage={setPage} />
         </div>
       </div>
     </div>
