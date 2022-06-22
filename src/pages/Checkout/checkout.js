@@ -4,7 +4,15 @@ import Summary from "../../components/Cart/Summary";
 import "./checkout.css";
 
 const Checkout = (props) => {
-  const { cartItems, onAdd, onRemove, onDelete, setPage } = props;
+  const {
+    cartItems,
+    onAdd,
+    onRemove,
+    onDelete,
+    setPage,
+    shippingCost,
+    setShippingCost,
+  } = props;
   return (
     <div className="main-cart album py-5 bg-light rounded">
       <div className="cart-body container rounded white">
@@ -15,7 +23,12 @@ const Checkout = (props) => {
             onRemove={onRemove}
             onDelete={onDelete}
           />
-          <Summary cartItems={cartItems} setPage={setPage} />
+          <Summary
+            cartItems={cartItems}
+            setPage={setPage}
+            shippingCost={shippingCost}
+            setShippingCost={setShippingCost}
+          />
         </div>
       </div>
     </div>

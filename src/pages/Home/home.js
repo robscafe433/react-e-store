@@ -13,7 +13,7 @@ import ThankYou from "../ThankYou/thankyou";
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
   const [page, setPage] = useState("home");
-
+  const [shippingCost, setShippingCost] = useState("");
   const [cartItems, setCartItems] = useState([]);
 
   const onAdd = (product) => {
@@ -63,6 +63,8 @@ function Home() {
           onRemove={onRemove}
           onDelete={onDelete}
           setPage={setPage}
+          shippingCost={shippingCost}
+          setShippingCost={setShippingCost}
         />
       ) : (
         ""

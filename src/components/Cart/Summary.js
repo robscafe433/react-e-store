@@ -5,10 +5,7 @@ import "./Summary.css";
 import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
-  const { cartItems, setPage } = props;
-
-  const [shippingCost, setShippingCost] = useState("0");
-  const grandTotal = "";
+  const { cartItems, setPage, shippingCost, setShippingCost } = props;
 
   const totalCartItems = cartItems.reduce((a, c) => a + c.inCart, 0); //a is accumulator, c is current count
   const runningItemsBalance = cartItems.reduce(
@@ -23,30 +20,6 @@ const Summary = (props) => {
   const parseFloatShippingCost = parseFloat(shippingCost);
 
   const GrandTotal = parsedRunningBalnace + parseFloatShippingCost;
-  {
-    console.log(
-      "The new toFixedRunningBalnace is : ",
-      parsedRunningBalnace,
-      typeof parsedRunningBalnace
-    );
-  }
-  {
-    console.log(
-      "The new parseFloatShippingCost is : ",
-      parseFloatShippingCost,
-      typeof parseFloatShippingCost
-    );
-  }
-  {
-    console.log("This is the GrandTotal : ", GrandTotal);
-  }
-
-  {
-    console.log(
-      "This is typeof shippingCost before parsing : ",
-      typeof shippingCost
-    );
-  }
 
   //
 
@@ -73,7 +46,10 @@ const Summary = (props) => {
         <div className="col-12 px-5 align-self-center">
           <div className="form-group">
             <label htmlFor="SHIPPING">SHIPPING</label>
-            <ShippingCost setShippingCost={setShippingCost} />
+            <ShippingCost
+              shippingCost={shippingCost}
+              setShippingCost={setShippingCost}
+            />
           </div>
         </div>
       </div>
@@ -83,7 +59,8 @@ const Summary = (props) => {
         </div>
         <div className="col-3">
           <p className="p-1 grandTotalAmountDisplay">
-            ${GrandTotal.toFixed(2)}
+            ${isNaN(GrandTotal) ? 0 : GrandTotal.toFixed(2)}
+            {/* $ {GrandTotal.toFixed(2)} */}
           </p>
         </div>
       </div>

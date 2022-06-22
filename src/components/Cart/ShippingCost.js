@@ -1,7 +1,7 @@
 import React from "react";
 
 const ShippingCost = (props) => {
-  const { setShippingCost } = props;
+  const { shippingCost, setShippingCost } = props;
 
   return (
     <div>
@@ -10,8 +10,9 @@ const ShippingCost = (props) => {
           const selectedShipping = e.target.value;
           setShippingCost(selectedShipping);
         }}
+        value={shippingCost}
       >
-        <option value="null">Select shipping option</option>
+        <option value="default">Select shipping option</option>
         <option value="0">5-6 Business Days - Free</option>
         <option value="13.98">3-4 Business Days - $13.98</option>
         <option value="22.98">2 Business Days - $22.98</option>
