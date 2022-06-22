@@ -22,7 +22,12 @@ const ShoppingCartDescription = (props) => {
             <div key={x.id} className="row">
               <div className="col-1">
                 {" "}
-                <img src={x.image} width="40" height="25"></img>
+                <img
+                  src={x.image}
+                  width="40"
+                  height="25"
+                  alt="description of products"
+                ></img>
               </div>
               <h4 className="col-2">{x.name}</h4>
               <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">

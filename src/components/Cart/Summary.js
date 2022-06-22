@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 import "./Summary.css";
 import ShippingCost from "./ShippingCost";
@@ -70,7 +69,7 @@ const Summary = (props) => {
             // onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
-            onClick={() => props.setPage("thankyou")}
+            onClick={() => setPage("thankyou")}
           >
             Checkout
           </button>

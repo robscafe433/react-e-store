@@ -50,7 +50,6 @@ function Home() {
     if (exist) {
       setCartItems(cartItems.filter((x) => x.id !== product.id));
     }
-    console.log("CartItems is now: ", cartItems);
   };
 
   return (
