@@ -2,11 +2,7 @@
   background-color: white;
 }
 
-.cartImagesSize{
-  size: 10%;
-}
-
-.delete-button{
+.delete-button {
   size: 10%;
   height: 2rem;
   width: 2rem;
