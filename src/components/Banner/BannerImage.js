@@ -10,14 +10,9 @@ const BannerImage = () => {
   );
   if (windowWidthPixels <= 1000) {
     console.log("pixels are LESS than 1k");
-    return (
-      <img src={bannerImagePic} alt="banner pic" className="banner" />
-
-    );
+    return <img src={bannerImagePic} alt="banner pic" className="banner" />;
   } else if (windowWidthPixels > 1000) {
-    return (
-      <img src={bannerImagePic} alt="banner pic" className="banner" />
-    );
+    return <img src={bannerImagePic} alt="banner pic" className="banner" />;
   }
 };
 
