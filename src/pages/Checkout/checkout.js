@@ -3,17 +3,36 @@ import ShoppingCartDescription from "../../components/Cart/ShoppingCartDescripti
 import Summary from "../../components/Cart/Summary";
 import "./checkout.css";
 
-const CheckoutPage = (props) => {
+const Checkout = (props) => {
+  const {
+    cartItems,
+    onAdd,
+    onRemove,
+    onDelete,
+    setPage,
+    shippingCost,
+    setShippingCost,
+  } = props;
   return (
     <div className="main-cart album py-5 bg-light rounded">
       <div className="cart-body container rounded white">
         <div className="row">
-          <ShoppingCartDescription />
-          <Summary />
+          <ShoppingCartDescription
+            cartItems={cartItems}
+            onAdd={onAdd}
+            onRemove={onRemove}
+            onDelete={onDelete}
+          />
+          <Summary
+            cartItems={cartItems}
+            setPage={setPage}
+            shippingCost={shippingCost}
+            setShippingCost={setShippingCost}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default CheckoutPage;
+export default Checkout;

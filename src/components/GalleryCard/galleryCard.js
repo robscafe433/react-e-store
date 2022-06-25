@@ -1,7 +1,7 @@
 import "./galleryCard.css";
 
 const GalleryCard = (props) => {
-  console.log(">>>>GalleryCardProps", props);
+  // console.log(">>>>GalleryCardProps", props);
   let product = props.product;
   return (
     <div className="card m-4 gallery-card">
@@ -13,6 +13,7 @@ const GalleryCard = (props) => {
           className="add-cart btn btn-primary"
           href="#"
           data-id={product.id}
+          onClick={() => props.onAdd(product)} // Produces individual object from each category -rs, ex: shovel,plant, etc...-rs
         >
           Add to Cart
         </button>
