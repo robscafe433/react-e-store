@@ -7,8 +7,10 @@ import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
 
 import { useState } from "react";
+
 import Checkout from "../Checkout/checkout";
 import ThankYou from "../ThankYou/thankyou";
+import CheckoutPage from "../Checkout/checkout";
 
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
@@ -68,6 +70,7 @@ function Home() {
       ) : (
         ""
       )}
+      {page === "cart" ? <CheckoutPage /> : ""}
       <div className="container">
         {page !== "cart" && page !== "thankyou" ? (
           <Banner setPage={setPage} />

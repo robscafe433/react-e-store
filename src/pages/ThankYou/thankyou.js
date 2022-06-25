@@ -5,7 +5,7 @@ import ThankYouLeftPanel from "../../components/Panels/ThankYouLeftPanel/thankyo
 import ThankYouTopRightPanel from "../../components/Panels/ThankYouTopRightPanel/thankyoutoprightpanel";
 import ThankYouBottomRightPanel from "../../components/Panels/ThankYouBottomRightPanel/thankyoubottomrightpanel";
 
-function ThankYou() {
+const ThankYou = () => {
   return (
     <div>
       <Navbar />
@@ -35,6 +35,6 @@ function ThankYou() {
       <Footer />
     </div>
   );
-}
+};
 
 export default ThankYou;
