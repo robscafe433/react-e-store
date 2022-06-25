@@ -16,13 +16,19 @@ function ThankYouBottomRightPanel() {
   };
 
   const playConfetti = () => {
-    if(startConfetti > 0) {
-      return (<Lottie options={defaultOptions} height={400} width={444} key={startConfetti} />);
+    if (startConfetti > 0) {
+      return (
+        <Lottie
+          options={defaultOptions}
+          height={400}
+          width={444}
+          key={startConfetti}
+        />
+      );
     } else {
       return null;
     }
-
-  }
+  };
 
   return (
     <div className="bottom-right-panel bg-light box-shadow-class py-3">
