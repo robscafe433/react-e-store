@@ -15,6 +15,9 @@ import CheckoutPage from "../Checkout/checkout";
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
   const [page, setPage] = useState("home");
+  {
+    console.log("in Home Component setPage is", page);
+  }
   const [shippingCost, setShippingCost] = useState("");
   const [cartItems, setCartItems] = useState([]);
 
@@ -70,7 +73,8 @@ function Home() {
       ) : (
         ""
       )}
-      {page === "cart" ? <CheckoutPage /> : ""}
+      {/* {page === "cart" ? <CheckoutPage /> : ""} */}
+      {console.log("These are the objects chosen", cartItems)}
       <div className="container">
         {page !== "cart" && page !== "thankyou" ? (
           <Banner setPage={setPage} />

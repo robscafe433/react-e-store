@@ -13,6 +13,9 @@ const Checkout = (props) => {
     shippingCost,
     setShippingCost,
   } = props;
+  {
+    console.log("*** *** *** Inside Checkout Component");
+  }
   return (
     <div className="main-cart album py-5 bg-light rounded">
       <div className="cart-body container rounded white">

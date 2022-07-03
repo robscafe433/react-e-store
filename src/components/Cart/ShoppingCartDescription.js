@@ -17,7 +17,12 @@ const ShoppingCartDescription = (props) => {
       </div>
       <div className="row mx-2 pt-4 border-bott cart-Display">
         <div className=" align-self-center col-12 col-md-12 col-lg-12">
-          {cartItems.length === 0 && <div>Cart is Empty</div>}
+          {console.log("***Right before .map , cartItems are:", cartItems)}
+          {console.log(
+            "What type is cartItems, must be object?",
+            typeof cartItems
+          )}
+          {/* {cartItems.length === 0 && <div>Cart is Empty</div>} */}
           {cartItems.map((x) => (
             <div key={x.id} className="row">
               <div className="col-1">
