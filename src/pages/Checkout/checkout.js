@@ -17,7 +17,7 @@ const Checkout = (props) => {
     console.log("*** *** *** Inside Checkout Component");
   }
   return (
-    <div className="main-cart album py-5 bg-light rounded">
+    <div className="main-cart album  bg-light rounded">
       <div className="cart-body container rounded white">
         <div className="row">
           <ShoppingCartDescription

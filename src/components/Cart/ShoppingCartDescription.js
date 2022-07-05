@@ -12,7 +12,7 @@ const ShoppingCartDescription = (props) => {
           <h2>Shopping cart</h2>
         </div>
         <div className="col-12 align-self-center totalNumberItemsDisplayLeftSide">
-          3 items
+          
         </div>
       </div>
       <div className="row mx-2 pt-4 border-bott cart-Display">
