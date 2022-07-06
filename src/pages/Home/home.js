@@ -20,6 +20,8 @@ function Home() {
   }
   const [shippingCost, setShippingCost] = useState("");
   const [cartItems, setCartItems] = useState([]);
+  let cartItemsCount = cartItems.reduce((p, c) => p + c.inCart, 0);
+  console.log("component Home cartItemsCount: ", cartItemsCount);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -59,7 +61,11 @@ function Home() {
 
   return (
     <div>
-      <Navbar setPage={setPage} />
+      <Navbar
+        setPage={setPage}
+        cartItems={cartItems}
+        cartItemsCount={cartItemsCount}
+      />
       {page === "cart" ? (
         <Checkout
           cartItems={cartItems}
@@ -69,6 +75,7 @@ function Home() {
           setPage={setPage}
           shippingCost={shippingCost}
           setShippingCost={setShippingCost}
+          cartItemsCount={cartItemsCount}
         />
       ) : (
         ""

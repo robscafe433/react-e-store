@@ -4,9 +4,9 @@ import "./Summary.css";
 import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
-  const { cartItems, setPage, shippingCost, setShippingCost } = props;
+  const { cartItems, setPage, shippingCost, setShippingCost, cartItemsCount } =
+    props;
 
-  const totalCartItems = cartItems.reduce((a, c) => a + c.inCart, 0); //a is accumulator, c is current count
   const runningItemsBalance = cartItems.reduce(
     (a, c) => a + c.inCart * c.price,
     0
@@ -32,7 +32,7 @@ const Summary = (props) => {
       <div className="row">
         <div className="col-8 mr-8rem col-md-8">
           <p className="p-4 totalNumberItemsDisplayRightSide">
-            Items {totalCartItems}
+            Items {cartItemsCount}
           </p>
         </div>
         <div className="col-4">

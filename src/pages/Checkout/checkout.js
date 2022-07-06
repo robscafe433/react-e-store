@@ -12,6 +12,7 @@ const Checkout = (props) => {
     setPage,
     shippingCost,
     setShippingCost,
+    cartItemsCount,
   } = props;
   {
     console.log("*** *** *** Inside Checkout Component");
@@ -31,6 +32,7 @@ const Checkout = (props) => {
             setPage={setPage}
             shippingCost={shippingCost}
             setShippingCost={setShippingCost}
+            cartItemsCount={cartItemsCount}
           />
         </div>
       </div>
