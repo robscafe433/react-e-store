@@ -4,15 +4,30 @@ import confetti from "./confetti.json";
 import Lottie from "react-lottie";
 
 function ThankYouBottomRightPanel() {
-  const [startConfetti, setConfetti] = useState(false);
+  const [startConfetti, setConfetti] = useState(0);
 
-  const defaultOptions = {
+  let defaultOptions = {
     loop: false,
     autoplay: true,
     animationData: confetti,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
+  };
+
+  const playConfetti = () => {
+    if (startConfetti > 0) {
+      return (
+        <Lottie
+          options={defaultOptions}
+          height={400}
+          width={444}
+          key={startConfetti}
+        />
+      );
+    } else {
+      return null;
+    }
   };
 
   return (
@@ -41,14 +56,12 @@ function ThankYouBottomRightPanel() {
       <br />
       <br />
       <br />
-      {startConfetti && (
-        <Lottie options={defaultOptions} height={400} width={444} />
-      )}
+      {playConfetti()}
       <button
         className="btn-lg btn-primary btn-virtual-gift"
         id="button1"
         onClick={() => {
-          setConfetti(!startConfetti);
+          setConfetti(startConfetti + 1);
         }}
       >
         Click for Virtual Gift
