@@ -1,6 +1,4 @@
 import "./thankyou.css";
-import Navbar from "../../components/Navbar/navbar.js";
-import Footer from "../../components/Footer/footer";
 import ThankYouLeftPanel from "../../components/Panels/ThankYouLeftPanel/thankyouleftpanel";
 import ThankYouTopRightPanel from "../../components/Panels/ThankYouTopRightPanel/thankyoutoprightpanel";
 import ThankYouBottomRightPanel from "../../components/Panels/ThankYouBottomRightPanel/thankyoubottomrightpanel";
@@ -8,7 +6,6 @@ import ThankYouBottomRightPanel from "../../components/Panels/ThankYouBottomRigh
 const ThankYou = () => {
   return (
     <div>
-      <Navbar />
       <main id="main" role="main">
         <hr className="my-4" />
 
@@ -32,7 +29,6 @@ const ThankYou = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
