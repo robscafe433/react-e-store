@@ -12,20 +12,3 @@
 .footer-content {
   margin-bottom: 0;
 }
-
-/* .footer #scrollup {
-    position: fixed;
-    display: none;
-    bottom: 80px;
-    right: 20px;
-    z-index: 99;
-    cursor: pointer;
-    -webkit-transition: color 0.5s;
-    transition: color 0.5s;
-}
-
-.footer #scrollup:hover {
-    color: #343a40;
-    background-color: #fff;
-    border-color: #343a40;
-} */

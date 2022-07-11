@@ -21,13 +21,10 @@ const Summary = (props) => {
   let toFixedRunningBalance = runningItemsBalance.toFixed(2);
   const parsedRunningBalnace = parseFloat(toFixedRunningBalance);
   // let toFixedRunningBalance = runningItemsBalance.toFixed(2);
-  //
 
   const parseFloatShippingCost = parseFloat(shippingCost);
 
   const GrandTotal = parsedRunningBalnace + parseFloatShippingCost;
-
-  //
 
   return (
     <div className="col-12 col-md-5 col-lg-4 blk">

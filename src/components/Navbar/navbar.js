@@ -1,12 +1,15 @@
 import React from "react";
 
 const Navbar = (props) => {
-  // console.log(">>>navbarprops", props);
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
         {/* href needs react setup*/}
-        <button className="btn btn-link navbar-brand" href="index.html">
+        <button
+          className="btn btn-link navbar-brand"
+          href="index.html"
+          onClick={() => props.setPage("home")}
+        >
           Robert's One Stop Shop
         </button>
         <button
