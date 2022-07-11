@@ -4,8 +4,15 @@ import "./Summary.css";
 import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
-  const { cartItems, setPage, shippingCost, setShippingCost, cartItemsCount } =
-    props;
+  const {
+    cartItems,
+    setPage,
+    shippingCost,
+    setShippingCost,
+    cartItemsCount,
+    setButtonDisable,
+    buttonDisable,
+  } = props;
 
   const runningItemsBalance = cartItems.reduce(
     (a, c) => a + c.inCart * c.price,
@@ -48,6 +55,8 @@ const Summary = (props) => {
             <ShippingCost
               shippingCost={shippingCost}
               setShippingCost={setShippingCost}
+              setButtonDisable={setButtonDisable}
+              cartItemsCount={cartItemsCount}
             />
           </div>
         </div>
@@ -69,6 +78,7 @@ const Summary = (props) => {
             // onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
+            disabled={buttonDisable}
             onClick={() => setPage("thankyou")}
           >
             Checkout

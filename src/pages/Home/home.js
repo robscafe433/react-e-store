@@ -23,6 +23,8 @@ function Home() {
   let cartItemsCount = cartItems.reduce((p, c) => p + c.inCart, 0);
   console.log("component Home cartItemsCount: ", cartItemsCount);
 
+  const [buttonDisable, setButtonDisable] = useState(true);
+
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
 
@@ -76,6 +78,8 @@ function Home() {
           shippingCost={shippingCost}
           setShippingCost={setShippingCost}
           cartItemsCount={cartItemsCount}
+          setButtonDisable={setButtonDisable}
+          buttonDisable={buttonDisable}
         />
       ) : (
         ""

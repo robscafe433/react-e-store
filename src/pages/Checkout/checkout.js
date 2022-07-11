@@ -13,6 +13,8 @@ const Checkout = (props) => {
     shippingCost,
     setShippingCost,
     cartItemsCount,
+    setButtonDisable,
+    buttonDisable,
   } = props;
   {
     console.log("*** *** *** Inside Checkout Component");
@@ -33,6 +35,8 @@ const Checkout = (props) => {
             shippingCost={shippingCost}
             setShippingCost={setShippingCost}
             cartItemsCount={cartItemsCount}
+            setButtonDisable={setButtonDisable}
+            buttonDisable={buttonDisable}
           />
         </div>
       </div>
