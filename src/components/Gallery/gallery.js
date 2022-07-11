@@ -12,7 +12,13 @@ const Gallery = (props) => {
       galleryCards = products.map((product) => {
         // console.log("These are getCategoryProducts: ", products);  // just  the three objects in each group -rs
         return (
-          <GalleryCard key={product.id} product={product} onAdd={props.onAdd} />
+          <GalleryCard
+            key={product.id}
+            product={product}
+            onAdd={props.onAdd}
+            setButtonDisable={props.setButtonDisable}
+            setShippingCost={props.setShippingCost}
+          />
         );
       });
     }

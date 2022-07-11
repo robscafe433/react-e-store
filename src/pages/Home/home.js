@@ -111,7 +111,13 @@ function Home() {
         )}
       </div>
       {page !== "home" && page !== "cart" && page !== "thankyou" ? (
-        <Gallery storeData={storeData} page={page} onAdd={onAdd} />
+        <Gallery
+          storeData={storeData}
+          page={page}
+          onAdd={onAdd}
+          setButtonDisable={setButtonDisable}
+          setShippingCost={setShippingCost}
+        />
       ) : (
         ""
       )}
