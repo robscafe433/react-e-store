@@ -64,7 +64,7 @@ const Summary = (props) => {
         </div>
         <div className="col-3">
           <p className="p-1 grandTotalAmountDisplay">
-            ${isNaN(GrandTotal) ? 0 : GrandTotal.toFixed(2)}
+            ${isNaN(GrandTotal) ? "0.00" : GrandTotal.toFixed(2)}
             {/* $ {GrandTotal.toFixed(2)} */}
           </p>
         </div>
