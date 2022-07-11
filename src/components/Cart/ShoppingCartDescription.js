@@ -40,7 +40,7 @@ const ShoppingCartDescription = (props) => {
                       className="btn btn-outline-secondary px-2 subtract-btn"
                       data-id={x.id}
                       data-name={x.name}
-                      onClick={() => onRemove(x)}
+                      onClick={() => (onRemove(x), buttonBoolean())}
                       type="button"
                     >
                       -
