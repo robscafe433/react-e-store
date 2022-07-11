@@ -3,7 +3,7 @@ import "./ShoppingCartDescription.css";
 import "./ShippingCost";
 
 const ShoppingCartDescription = (props) => {
-  const { cartItems, onAdd, onRemove, onDelete } = props;
+  const { cartItems, onAdd, onRemove, onDelete, buttonBoolean } = props;
 
   return (
     <div className="col-lg-8 white">
@@ -11,9 +11,7 @@ const ShoppingCartDescription = (props) => {
         <div className="col-12 col-md-12 col-lg-12 align-self-center">
           <h2>Shopping cart</h2>
         </div>
-        <div className="col-12 align-self-center totalNumberItemsDisplayLeftSide">
-          
-        </div>
+        <div className="col-12 align-self-center totalNumberItemsDisplayLeftSide"></div>
       </div>
       <div className="row mx-2 pt-4 border-bott cart-Display">
         <div className=" align-self-center col-12 col-md-12 col-lg-12">
@@ -71,7 +69,10 @@ const ShoppingCartDescription = (props) => {
                 </div>
               </div>
               <h4 className="col-2">@ {x.price.toFixed(2)}</h4>
-              <button className="delete-button" onClick={() => onDelete(x)}>
+              <button
+                className="delete-button"
+                onClick={() => (onDelete(x), buttonBoolean())}
+              >
                 x
               </button>
               {/* <h4 className="col-2">{x.inCart}</h4> // insert code here */}

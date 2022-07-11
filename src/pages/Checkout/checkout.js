@@ -15,6 +15,7 @@ const Checkout = (props) => {
     cartItemsCount,
     setButtonDisable,
     buttonDisable,
+    buttonBoolean,
   } = props;
   {
     console.log("*** *** *** Inside Checkout Component");
@@ -28,6 +29,7 @@ const Checkout = (props) => {
             onAdd={onAdd}
             onRemove={onRemove}
             onDelete={onDelete}
+            buttonBoolean={buttonBoolean}
           />
           <Summary
             cartItems={cartItems}

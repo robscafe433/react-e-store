@@ -21,6 +21,7 @@ function Home() {
   const [shippingCost, setShippingCost] = useState("");
   const [cartItems, setCartItems] = useState([]);
   let cartItemsCount = cartItems.reduce((p, c) => p + c.inCart, 0);
+  let cartItemCountMinusOne = cartItemsCount - 1;
   console.log("component Home cartItemsCount: ", cartItemsCount);
 
   const [buttonDisable, setButtonDisable] = useState(true);
@@ -61,6 +62,19 @@ function Home() {
     }
   };
 
+  function buttonBoolean() {
+    if (cartItemCountMinusOne === 0) {
+      setButtonDisable(true);
+      setShippingCost("default");
+      console.log(
+        "ZZZZZZZZZZZZZZZZZ Inside home/function: true  (cartItemsCount = 0)"
+      );
+      // return true;
+    } else {
+      console.log(">>>>>>>>>>>>>>>>>>Inside home/function: true  (1 or more)");
+    }
+  }
+
   return (
     <div>
       <Navbar
@@ -80,6 +94,7 @@ function Home() {
           cartItemsCount={cartItemsCount}
           setButtonDisable={setButtonDisable}
           buttonDisable={buttonDisable}
+          buttonBoolean={buttonBoolean}
         />
       ) : (
         ""
