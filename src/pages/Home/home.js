@@ -14,14 +14,12 @@ import ThankYou from "../ThankYou/thankyou";
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
   const [page, setPage] = useState("home");
-  {
-    console.log("in Home Component setPage is", page);
-  }
+  
   const [shippingCost, setShippingCost] = useState("");
   const [cartItems, setCartItems] = useState([]);
   let cartItemsCount = cartItems.reduce((p, c) => p + c.inCart, 0);
   let cartItemCountMinusOne = cartItemsCount - 1;
-  console.log("component Home cartItemsCount: ", cartItemsCount);
+  
 
   const [buttonDisable, setButtonDisable] = useState(true);
 
