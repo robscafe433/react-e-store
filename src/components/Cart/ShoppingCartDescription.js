@@ -39,7 +39,7 @@ const ShoppingCartDescription = (props) => {
               ></img>
             </div>
             <div className="col-6 col-md-6 col-lg-2 pt-4 pt-lg-0">
-              <h4 className="fontSmallMQ">{x.name}</h4>
+              <h4 className="font-Small">{x.name}</h4>
             </div>
             <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
               <div className="input-group w-75 px-1 mt-n3">
@@ -77,7 +77,7 @@ const ShoppingCartDescription = (props) => {
               </div>
             </div>
             <div>
-              <h4 className="col-4 col-md-6 col-lg-2 fontSmallMQ">
+              <h4 className="col-4 col-md-6 col-lg-2 font-Small">
                 @{x.price.toFixed(2)}
               </h4>
             </div>
