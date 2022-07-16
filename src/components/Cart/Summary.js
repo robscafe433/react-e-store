@@ -4,9 +4,16 @@ import "./Summary.css";
 import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
-  const { cartItems, setPage, shippingCost, setShippingCost } = props;
+  const {
+    cartItems,
+    setPage,
+    shippingCost,
+    setShippingCost,
+    cartItemsCount,
+    setButtonDisable,
+    buttonDisable,
+  } = props;
 
-  const totalCartItems = cartItems.reduce((a, c) => a + c.inCart, 0); //a is accumulator, c is current count
   const runningItemsBalance = cartItems.reduce(
     (a, c) => a + c.inCart * c.price,
     0
@@ -29,7 +36,7 @@ const Summary = (props) => {
       <div className="row">
         <div className="col-8 mr-8rem col-md-8">
           <p className="p-4 totalNumberItemsDisplayRightSide">
-            Items {totalCartItems}
+            Items {cartItemsCount}
           </p>
         </div>
         <div className="col-4">
@@ -45,6 +52,8 @@ const Summary = (props) => {
             <ShippingCost
               shippingCost={shippingCost}
               setShippingCost={setShippingCost}
+              setButtonDisable={setButtonDisable}
+              cartItemsCount={cartItemsCount}
             />
           </div>
         </div>
@@ -55,7 +64,7 @@ const Summary = (props) => {
         </div>
         <div className="col-3">
           <p className="p-1 grandTotalAmountDisplay">
-            ${isNaN(GrandTotal) ? 0 : GrandTotal.toFixed(2)}
+            ${isNaN(GrandTotal) ? "0.00" : GrandTotal.toFixed(2)}
             {/* $ {GrandTotal.toFixed(2)} */}
           </p>
         </div>
@@ -66,6 +75,7 @@ const Summary = (props) => {
             // onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
+            disabled={buttonDisable}
             onClick={() => setPage("thankyou")}
           >
             Checkout

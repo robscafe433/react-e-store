@@ -14,8 +14,13 @@ import ThankYou from "../ThankYou/thankyou";
 function Home() {
   const storeData = useFetch("http://localhost:8000/items");
   const [page, setPage] = useState("home");
+
   const [shippingCost, setShippingCost] = useState("");
   const [cartItems, setCartItems] = useState([]);
+  let cartItemsCount = cartItems.reduce((p, c) => p + c.inCart, 0);
+  let cartItemCountMinusOne = cartItemsCount - 1;
+
+  const [buttonDisable, setButtonDisable] = useState(true);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -53,9 +58,26 @@ function Home() {
     }
   };
 
+  function buttonBoolean() {
+    if (cartItemCountMinusOne === 0) {
+      setButtonDisable(true);
+      setShippingCost("default");
+      console.log(
+        "ZZZZZZZZZZZZZZZZZ Inside home/function: true  (cartItemsCount = 0)"
+      );
+      // return true;
+    } else {
+      console.log(">>>>>>>>>>>>>>>>>>Inside home/function: true  (1 or more)");
+    }
+  }
+
   return (
     <div>
-      <Navbar setPage={setPage} />
+      <Navbar
+        setPage={setPage}
+        cartItems={cartItems}
+        cartItemsCount={cartItemsCount}
+      />
       {page === "cart" ? (
         <Checkout
           cartItems={cartItems}
@@ -65,6 +87,10 @@ function Home() {
           setPage={setPage}
           shippingCost={shippingCost}
           setShippingCost={setShippingCost}
+          cartItemsCount={cartItemsCount}
+          setButtonDisable={setButtonDisable}
+          buttonDisable={buttonDisable}
+          buttonBoolean={buttonBoolean}
         />
       ) : (
         ""
@@ -82,7 +108,13 @@ function Home() {
         )}
       </div>
       {page !== "home" && page !== "cart" && page !== "thankyou" ? (
-        <Gallery storeData={storeData} page={page} onAdd={onAdd} />
+        <Gallery
+          storeData={storeData}
+          page={page}
+          onAdd={onAdd}
+          setButtonDisable={setButtonDisable}
+          setShippingCost={setShippingCost}
+        />
       ) : (
         ""
       )}

@@ -1,7 +1,8 @@
 import React from "react";
 
 const ShippingCost = (props) => {
-  const { shippingCost, setShippingCost } = props;
+  const { shippingCost, setShippingCost, setButtonDisable, cartItemsCount } =
+    props;
 
   return (
     <div>
@@ -9,6 +10,9 @@ const ShippingCost = (props) => {
         onChange={(e) => {
           const selectedShipping = e.target.value;
           setShippingCost(selectedShipping);
+          isNaN(e.target.value) || cartItemsCount === 0
+            ? setButtonDisable(true)
+            : setButtonDisable(false);
         }}
         value={shippingCost}
       >

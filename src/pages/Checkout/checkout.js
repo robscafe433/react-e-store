@@ -12,9 +12,14 @@ const Checkout = (props) => {
     setPage,
     shippingCost,
     setShippingCost,
+    cartItemsCount,
+    setButtonDisable,
+    buttonDisable,
+    buttonBoolean,
   } = props;
+
   return (
-    <div className="main-cart album py-5 bg-light rounded">
+    <div className="main-cart album  bg-light rounded">
       <div className="cart-body container rounded white">
         <div className="row">
           <ShoppingCartDescription
@@ -22,12 +27,16 @@ const Checkout = (props) => {
             onAdd={onAdd}
             onRemove={onRemove}
             onDelete={onDelete}
+            buttonBoolean={buttonBoolean}
           />
           <Summary
             cartItems={cartItems}
             setPage={setPage}
             shippingCost={shippingCost}
             setShippingCost={setShippingCost}
+            cartItemsCount={cartItemsCount}
+            setButtonDisable={setButtonDisable}
+            buttonDisable={buttonDisable}
           />
         </div>
       </div>

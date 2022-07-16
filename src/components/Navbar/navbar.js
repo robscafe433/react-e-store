@@ -85,7 +85,7 @@ const Navbar = (props) => {
             type="submit"
             onClick={() => props.setPage("cart")}
           >
-            Cart <span>0</span>
+            Cart <span>{props.cartItemsCount}</span>
           </button>
         </div>
       </nav>
