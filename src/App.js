@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import useFetch from "./api/store";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from './pages/Home/home';
+import Checkout from './pages/Checkout/checkout';
+import ThankYou from './pages/ThankYou/thankyou';
 
 function App() {
+  const storeData = useFetch("http://localhost:8000/items");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/Apsdp.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/react-e-store" exact element={<Home storeData={storeData} />} />
+        <Route path="/react-e-store/checkout"  element={<Checkout />} />
+        <Route path="/react-e-store/thankyou"  element={<ThankYou />} />
+      </Routes>
+    </Router>
   );
 }
 
