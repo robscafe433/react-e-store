@@ -10,8 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path="/react-e-store"
-          exact
+          path="/react-e-store/*"
           element={<Home storeData={storeData} />}
         />
         <Route path="/react-e-store/checkout" element={<Checkout />} />
