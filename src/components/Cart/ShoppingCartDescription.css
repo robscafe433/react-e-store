@@ -26,6 +26,13 @@
   font-size: 14px;
 }
 
+.drop-down-button-background-color{
+  color: #0F1111;
+  background-color: #F0F2F2;
+  border: width 1px;;
+  border-color: #3b4243;
+}
+
 .price-alignment-right{
   padding-top: 60px;
   text-align:right ;
@@ -45,6 +52,13 @@
   font-size: 18px;
   
 }
+
+.box-shadow-class {
+  box-shadow: 0 6px 20px 0 rgba(0,0,0,19%);
+  border: transparent;
+}
+
+
 
 @media screen and (max-width: 767px) {
   .font-small {

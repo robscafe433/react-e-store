@@ -48,6 +48,45 @@ const ShoppingCartDescription = (props) => {
               <h6 className="small-font-with-light-purple">
                 Shipped from: place of origin here
               </h6>
+              <div className="btn-group dropdown">
+                <button
+                  type="button"
+                  className="btn drop-down-button-background-color box-shadow-class dropdown-toggle "
+                  data-flip="false"
+                  data-toggle="dropdown"
+                >
+                  Qty:
+                </button>
+
+                <div className="dropdown-menu">
+                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
+                    Button 1
+                  </a>
+                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
+                    Button 2
+                  </a>
+                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
+                    Button 3
+                  </a>
+                  <div className="dropdown-divider"></div>
+                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
+                    Sign Out
+                  </a>
+                </div>
+              </div>
+
+              {/* <button
+                className="btn bg-light dropdown-toggle drop-down-button-background-color box-shadow-class"
+                type="button"
+                id="count-dropdown"
+              >
+                Qty:
+              </button> */}
+              {/* <ul className="dropdown-menu" aria-labelledby="book-dropdown">
+                <li>#1</li>
+                <li>#2</li>
+                <li>#3</li>
+              </ul> */}
             </div>
             {/* <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
               <div className="input-group w-75 px-1 mt-n3">
