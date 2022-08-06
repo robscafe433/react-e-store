@@ -2,7 +2,6 @@ import "./home.css";
 import Navbar from "../../components/Navbar/navbar.js";
 import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
-import useFetch from "../../api/store";
 import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
 
@@ -11,8 +10,8 @@ import { useState } from "react";
 import Checkout from "../Checkout/checkout";
 import ThankYou from "../ThankYou/thankyou";
 
-function Home() {
-  const storeData = useFetch("http://localhost:8000/items");
+function Home(props) {
+  const storeData = props.storeData;
   const [page, setPage] = useState("home");
 
   const [shippingCost, setShippingCost] = useState("");
