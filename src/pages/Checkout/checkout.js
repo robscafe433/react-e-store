@@ -19,25 +19,27 @@ const Checkout = (props) => {
   } = props;
 
   return (
-    <div className="main-cart album  bg-light rounded">
-      <div className="cart-body container rounded white">
-        <div className="row">
-          <ShoppingCartDescription
-            cartItems={cartItems}
-            onAdd={onAdd}
-            onRemove={onRemove}
-            onDelete={onDelete}
-            buttonBoolean={buttonBoolean}
-          />
-          <Summary
-            cartItems={cartItems}
-            setPage={setPage}
-            shippingCost={shippingCost}
-            setShippingCost={setShippingCost}
-            cartItemsCount={cartItemsCount}
-            setButtonDisable={setButtonDisable}
-            buttonDisable={buttonDisable}
-          />
+    <div className="container-fluid main" role="main">
+      <div className="main-cart album py-5 bg-light rounded">
+        <div className="cart-body container rounded white">
+          <div className="row">
+            <ShoppingCartDescription
+              cartItems={cartItems}
+              onAdd={onAdd}
+              onRemove={onRemove}
+              onDelete={onDelete}
+              buttonBoolean={buttonBoolean}
+            />
+            <Summary
+              cartItems={cartItems}
+              setPage={setPage}
+              shippingCost={shippingCost}
+              setShippingCost={setShippingCost}
+              cartItemsCount={cartItemsCount}
+              setButtonDisable={setButtonDisable}
+              buttonDisable={buttonDisable}
+            />
+          </div>
         </div>
       </div>
     </div>

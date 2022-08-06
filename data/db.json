@@ -1,107 +1,117 @@
 {
-    "storeResources": {
-        "banners": [
-            "https://cdn.pixabay.com/photo/2015/09/21/14/24/supermarket-949913_1280.jpg"
-        ]
-    },
-    "items": [
-        {
-            "category": "groceries",
-            "categoryImage": "https://cdn.pixabay.com/photo/2018/01/25/08/14/aisle-3105629_960_720.jpg",
-            "products": [
-                {
-                    "id": 1,
-                    "name": "Carrots",
-                    "tag": "carrots",
-                    "price": 6.0,
-                    "inCart": 0,
-                    "image": "https://cdn.pixabay.com/photo/2016/11/23/00/22/carrots-1851424_960_720.jpg"
-                },
-                {
-                    "id": 2,
-                    "name": "Lettuce",
-                    "tag": "lettuce",
-                    "price": 4.99,
-                    "inCart": 0,
-                    "image": "https://cdn.pixabay.com/photo/2016/11/18/13/48/food-1834645_960_720.jpg"
-                },
-                {
-                    "id": 3,
-                    "name": "Tomatoes",
-                    "tag": "tomatoes",
-                    "price": 2.5,
-                    "inCart": 0,
-                    "image": "https://cdn.pixabay.com/photo/2016/03/26/16/44/tomatoes-1280859_960_720.jpg"
-                }
-            ]
-        },
-        {
-            "category": "garden",
-            "categoryImage": "https://cdn.pixabay.com/photo/2017/10/01/17/21/shed-2806281_960_720.jpg",
-            "products": [
-                {
-                    "id": 4,
-                    "name": "Shovel",
-                    "tag": "shovel",
-                    "price": 4.75,
-                    "inCart": 0,
-                    "image": "https://media.tractorsupply.com/is/image/TractorSupplyCompany/1023426?$456$"
-                },
-                {
-                    "id": 5,
-                    "name": "Plant",
-                    "tag": "plant",
-                    "price": 4.99,
-                    "inCart": 0,
-                    "image": "https://images.homedepot-static.com/productImages/428c6b4e-ff07-4bda-89ec-f3fb4714df1d/svn/nearly-natural-artificial-trees-6585-64_600.jpg"
-                },
-                {
-                    "id": 6,
-                    "name": "Fertilizer",
-                    "tag": "fertilizer",
-                    "price": 2.5,
-                    "inCart": 0,
-                    "image": "https://images.homedepot-static.com/productImages/37fdb432-2c29-4f58-add7-4c5af651cae2/svn/vigoro-lawn-fertilizers-52203pm-64_1000.jpg"
-                }
-            ]
-        },
-        {
-            "category": "household",
-            "categoryImage": "https://cdn.pixabay.com/photo/2014/12/17/16/54/clean-571679_960_720.jpg",
-            "products": [
-                {
-                    "id": 7,
-                    "name": "Clorox",
-                    "tag": "clorox",
-                    "price": 14.99,
-                    "inCart": 0,
-                    "image": "https://content.etilize.com/Original/1056307895.jpg"
-                },
-                {
-                    "id": 8,
-                    "name": "Paper Towels",
-                    "tag": "paper-towels",
-                    "price": 5,
-                    "inCart": 0,
-                    "image": "https://i5.walmartimages.com/asr/d28b1bfe-b12d-4a71-b045-c20b38326bb1_1.871bf9a21e03ab389cd5b44b283d2573.jpeg"
-                },
-                {
-                    "id": 9,
-                    "name": "Batteries",
-                    "tag": "batteries",
-                    "price": 2.25,
-                    "inCart": 0,
-                    "image": "https://i5.walmartimages.com/asr/c752fd01-14d3-48d7-aa91-b5a400ef6163_1.62a7003e0437f909d161471d1e977d30.png"
-                },
-                {
-                    "id": 10,
-                    "name": "Mop",
-                    "tag": "mop",
-                    "price": 16.25,
-                    "inCart": 0,
-                    "image": "https://mobileimages.lowes.com/product/converted/071798/071798000305.jpg?size=pdhi"
-                }
-            ]
-        }
+  "storeResources": {
+    "banners": [
+      "https://cdn.pixabay.com/photo/2015/09/21/14/24/supermarket-949913_1280.jpg"
     ]
+  },
+  "items": [
+    {
+      "category": "groceries",
+      "categoryImage": "https://cdn.pixabay.com/photo/2018/01/25/08/14/aisle-3105629_960_720.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Carrots",
+          "tag": "carrots",
+          "description": "Our organic carrots are deliciously sweet, enjoyable, and also free of harmful pesticides, herbicides and fertilizers.",
+          "price": 6.0,
+          "inCart": 0,
+          "image": "https://cdn.pixabay.com/photo/2016/11/23/00/22/carrots-1851424_960_720.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Lettuce",
+          "tag": "lettuce",
+          "description": "These delicious heads of crisp and refreshing lettuce are grown in accordance with organic products, our organic produce is free of artificial or synthetic fertilizers and full of unforgettable, great tasting flavor.",
+          "price": 4.99,
+          "inCart": 0,
+          "image": "https://cdn.pixabay.com/photo/2016/11/18/13/48/food-1834645_960_720.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Tomatoes",
+          "tag": "tomatoes",
+          "description": " Bringing garden fresh quality, our organic tomatoes, are naturally fresh and juicy. Tomatoes are one of the most widely used fruits, making their way into salads, sandwiches, soups, pastas, and omelets, as well as many more dishes.",
+          "price": 2.5,
+          "inCart": 0,
+          "image": "https://cdn.pixabay.com/photo/2016/03/26/16/44/tomatoes-1280859_960_720.jpg"
+        }
+      ]
+    },
+    {
+      "category": "garden",
+      "categoryImage": "https://cdn.pixabay.com/photo/2017/10/01/17/21/shed-2806281_960_720.jpg",
+      "products": [
+        {
+          "id": 4,
+          "name": "Shovel",
+          "tag": "shovel",
+          "description": "This round nose shovel is ideal for digging, clearing and breaking up soil. The 40 in. handle is made of a high-strength fiberglass laminate with a comfortable foam grip. Featuring a heavy duty collar for extra strength, this round point shovel is ideal for gardeners, landscapers and ranchers.",
+          "price": 4.75,
+          "inCart": 0,
+          "image": "https://media.tractorsupply.com/is/image/TractorSupplyCompany/1023426?$456$"
+        },
+        {
+          "id": 5,
+          "name": "Plant",
+          "tag": "plant",
+          "description": "This is a widely loved plant with many endearing nicknames like UFO plant, pancake plant, and others. Its love of humidity makes it a great way to add color to a bathroom. The sprouted leafy discs could also work in any space with bright indirect light. Let the soil dry out between waterings to avoid root rot. Their leaves will droop a bit when they are thirsty.",
+          "price": 4.99,
+          "inCart": 0,
+          "image": "https://images.homedepot-static.com/productImages/428c6b4e-ff07-4bda-89ec-f3fb4714df1d/svn/nearly-natural-artificial-trees-6585-64_600.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Fertilizer",
+          "tag": "fertilizer",
+          "description": "Home Grown fertilizer is formulated to feed vegetable gardens, summer and winter crops, container plantings or native backyard soil. Use it during initial planting of seeds, transplanting, and on a regular basis as a top dressing or compost tea.",
+          "price": 2.5,
+          "inCart": 0,
+          "image": "https://images.homedepot-static.com/productImages/37fdb432-2c29-4f58-add7-4c5af651cae2/svn/vigoro-lawn-fertilizers-52203pm-64_1000.jpg"
+        }
+      ]
+    },
+    {
+      "category": "household",
+      "categoryImage": "https://cdn.pixabay.com/photo/2014/12/17/16/54/clean-571679_960_720.jpg",
+      "products": [
+        {
+          "id": 7,
+          "name": "Clorox",
+          "tag": "clorox",
+          "description": "DISINFECTING BLEACH: Concentrated bleach liquid kills 99.9% of bacteria and viruses, and it keeps whites at their whitest and your home smelling fresh",
+          "price": 14.99,
+          "inCart": 0,
+          "image": "https://content.etilize.com/Original/1056307895.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Paper Towels",
+          "tag": "paper-towels",
+          "description": "Don't let spills and messes get in your way. Lock in confidence with Bounty, the Quicker Picker Upper. This pack contains Bounty white Select-A-Size paper towels that are 2X more absorbent** and strong when wet, so you can get the job done quickly. With strength and absorbency built into each sheet, Bounty Paper Towels come in clutch for speedy cleanups. Don't let spills slow you down, Bounty's got you covered. Order with Drive Up and we'll bring it right out to your car. **vs. the Custom-Size-It brand in the US and the Premium Green Leaf Towel in Canada *vs. leading ordinary brand",
+          "price": 5,
+          "inCart": 0,
+          "image": "https://i5.walmartimages.com/asr/d28b1bfe-b12d-4a71-b045-c20b38326bb1_1.871bf9a21e03ab389cd5b44b283d2573.jpeg"
+        },
+        {
+          "id": 9,
+          "name": "Batteries",
+          "tag": "batteries",
+          "description": "Formulated with POWER ingredients which deliver lasting performance in your devices",
+          "price": 2.25,
+          "inCart": 0,
+          "image": "https://i5.walmartimages.com/asr/c752fd01-14d3-48d7-aa91-b5a400ef6163_1.62a7003e0437f909d161471d1e977d30.png"
+        },
+        {
+          "id": 10,
+          "name": "Mop",
+          "tag": "mop",
+          "description": "This 4-ply cotton mop is ideal for small clean-up jobs. The plastic- reinforced binding adds strength.",
+          "price": 16.25,
+          "inCart": 0,
+          "image": "https://mobileimages.lowes.com/product/converted/071798/071798000305.jpg?size=pdhi"
+        }
+      ]
+    }
+  ]
 }

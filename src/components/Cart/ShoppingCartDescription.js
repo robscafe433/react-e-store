@@ -6,7 +6,7 @@ const ShoppingCartDescription = (props) => {
   const { cartItems, onAdd, onRemove, onDelete, buttonBoolean } = props;
 
   return (
-    <div className="col-12 col-md-7 col-lg-8">
+    <div className="col-12 col-md-7 col-lg-9">
       <div
         className="
                                     row
@@ -19,29 +19,37 @@ const ShoppingCartDescription = (props) => {
       >
         <div
           className="
-                                        col-12 col-md-12 col-lg-12
+                                        col-12 col-md-12 col-lg-10
                                         align-self-center
                                     "
         >
           <h2>Shopping cart</h2>
+          <h6 className="small-font-with-light-blue">Deselect all items</h6>
         </div>
+        <div className="col-lg-2 price-alignment-right">Price</div>
       </div>
       <div>
         {cartItems.map((x) => (
           <div key={x.id} className="row">
-            <div className="col-6 col-md-6 col-lg-1">
+            <div className="col-6 col-md-6 col-lg-3">
               {" "}
               <img
                 src={x.image}
-                width="40"
-                height="25"
-                alt="description of products"
+                width="180"
+                height="180"
+                alt="image of products"
               ></img>
             </div>
-            <div className="col-6 col-md-6 col-lg-2 pt-4 pt-lg-0">
-              <h4 className="font-small">{x.name}</h4>
+            <div className="col-6 col-md-6 col-lg-6 pt-4 pt-lg-0">
+              <h4 className="font-small written-description-of-product">
+                {x.description}
+              </h4>
+              <h6 className="small-font-with-light-blue">In Stock</h6>
+              <h6 className="small-font-with-light-purple">
+                Shipped from: place of origin here
+              </h6>
             </div>
-            <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
+            {/* <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
               <div className="input-group w-75 px-1 mt-n3">
                 <div className="input-group-prepend">
                   <button
@@ -75,20 +83,18 @@ const ShoppingCartDescription = (props) => {
                   </button>
                 </div>
               </div>
+            </div> */}
+            <div className="col-4 col-md-6 col-lg-3 font-small gen-text-alignment-right">
+              <h4>${x.price.toFixed(2)}</h4>
             </div>
-            <div>
-              <h4 className="col-4 col-md-6 col-lg-2 font-small">
-                @{x.price.toFixed(2)}
-              </h4>
-            </div>
-            <div className="col-2 col-md-1 col-lg-3">
+            {/* <div className="col-2 col-md-1 col-lg-3">
               <button
                 className="delete-button"
                 onClick={() => (onDelete(x), buttonBoolean())}
               >
                 x
               </button>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

@@ -27,7 +27,7 @@ const Summary = (props) => {
   const GrandTotal = parsedRunningBalnace + parseFloatShippingCost;
 
   return (
-    <div className="col-12 col-md-5 col-lg-4 blk">
+    <div className="col-12 col-md-5 col-lg-3 blk">
       <div className="row mx-2 p-3 pb-5 border-bottom border-secondary">
         <div className="col-12 col-md-6">
           <h3>Summary</h3>
