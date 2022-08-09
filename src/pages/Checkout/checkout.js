@@ -9,6 +9,7 @@ const Checkout = (props) => {
     onAdd,
     onRemove,
     onDelete,
+    onCartButtonChangeCount,
     setPage,
     shippingCost,
     setShippingCost,
@@ -28,6 +29,7 @@ const Checkout = (props) => {
               onAdd={onAdd}
               onRemove={onRemove}
               onDelete={onDelete}
+              onCartButtonChangeCount={onCartButtonChangeCount}
               buttonBoolean={buttonBoolean}
             />
             <Summary

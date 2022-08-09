@@ -3,7 +3,14 @@ import "./ShoppingCartDescription.css";
 import "./ShippingCost";
 
 const ShoppingCartDescription = (props) => {
-  const { cartItems, onAdd, onRemove, onDelete, buttonBoolean } = props;
+  const {
+    cartItems,
+    onAdd,
+    onRemove,
+    onDelete,
+    onCartButtonChangeCount,
+    buttonBoolean,
+  } = props;
 
   return (
     <div className="col-12 col-md-7 col-lg-9">
@@ -48,92 +55,36 @@ const ShoppingCartDescription = (props) => {
               <h6 className="small-font-with-light-purple">
                 Shipped from: place of origin here
               </h6>
-              <div className="btn-group dropdown">
-                <button
-                  type="button"
-                  className="btn drop-down-button-background-color box-shadow-class dropdown-toggle "
-                  data-flip="false"
-                  data-toggle="dropdown"
-                >
-                  Qty:
-                </button>
-
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
-                    Button 1
-                  </a>
-                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
-                    Button 2
-                  </a>
-                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
-                    Button 3
-                  </a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="http://sonarsystems.co.uk">
-                    Sign Out
-                  </a>
-                </div>
-              </div>
-
-              {/* <button
-                className="btn bg-light dropdown-toggle drop-down-button-background-color box-shadow-class"
-                type="button"
-                id="count-dropdown"
-              >
-                Qty:
-              </button> */}
-              {/* <ul className="dropdown-menu" aria-labelledby="book-dropdown">
-                <li>#1</li>
-                <li>#2</li>
-                <li>#3</li>
-              </ul> */}
             </div>
-            {/* <div className="col-6 my-2 col-md-6 col-lg-4 pb-4 align-self-center">
-              <div className="input-group w-75 px-1 mt-n3">
-                <div className="input-group-prepend">
-                  <button
-                    className="btn btn-outline-secondary px-2 subtract-btn"
-                    data-id={x.id}
-                    data-name={x.name}
-                    onClick={() => (onRemove(x), buttonBoolean())}
-                    type="button"
-                  >
-                    -
-                  </button>
-                </div>
-                <div
-                  type="text"
-                  className="form-control"
-                  placeholder="Qty"
-                  aria-label="Quantity"
-                  aria-describedby="basic-addon1"
-                >
-                  {x.inCart}
-                </div>
-                <div className="input-group-prepend">
-                  <button
-                    className="btn btn-outline-secondary px-2 add-btn"
-                    data-id={x.id}
-                    data-name={x.name}
-                    onClick={() => onAdd(x)}
-                    type="button"
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div> */}
+
             <div className="col-4 col-md-6 col-lg-3 font-small gen-text-alignment-right">
               <h4>${x.price.toFixed(2)}</h4>
             </div>
-            {/* <div className="col-2 col-md-1 col-lg-3">
-              <button
-                className="delete-button"
-                onClick={() => (onDelete(x), buttonBoolean())}
+            <button>
+              Qty:{" "}
+              <select
+                onChange={(e) => {
+                  const buttonItemCount = e.target.value;
+                  const numButtonItemCount = parseFloat(buttonItemCount);
+
+                  onCartButtonChangeCount(x, numButtonItemCount);
+                }}
+                value={x.inCart}
               >
-                x
-              </button>
-            </div> */}
+                <option value="default">{x.inCart}</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10+</option>
+              </select>
+            </button>
           </div>
         ))}
       </div>

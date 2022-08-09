@@ -22,6 +22,21 @@ function Home() {
 
   const [buttonDisable, setButtonDisable] = useState(true);
 
+  // used in cart page, select number on button dropdown.
+
+  const onCartButtonChangeCount = (
+    incomingProductObject,
+    numButtonItemCount
+  ) => {
+    setCartItems(
+      cartItems.map((individualCartItemsObject) =>
+        individualCartItemsObject.id === incomingProductObject.id
+          ? { ...individualCartItemsObject, inCart: numButtonItemCount }
+          : individualCartItemsObject
+      )
+    );
+  };
+
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
 
@@ -84,6 +99,7 @@ function Home() {
           onAdd={onAdd}
           onRemove={onRemove}
           onDelete={onDelete}
+          onCartButtonChangeCount={onCartButtonChangeCount}
           setPage={setPage}
           shippingCost={shippingCost}
           setShippingCost={setShippingCost}
@@ -95,6 +111,7 @@ function Home() {
       ) : (
         ""
       )}
+      {console.log(cartItems)}
       <div className="container">
         {page !== "cart" && page !== "thankyou" ? (
           <Banner setPage={setPage} />
@@ -123,7 +140,6 @@ function Home() {
       ) : (
         ""
       )}
-
       <Footer />
     </div>
   );
