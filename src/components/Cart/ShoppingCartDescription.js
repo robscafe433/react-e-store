@@ -66,13 +66,12 @@ const ShoppingCartDescription = (props) => {
                 onChange={(e) => {
                   const buttonItemCount = e.target.value;
                   const numButtonItemCount = parseFloat(buttonItemCount);
-
                   onCartButtonChangeCount(x, numButtonItemCount);
                 }}
                 value={x.inCart}
               >
                 <option value="default">{x.inCart}</option>
-                <option value="0">0</option>
+                <option value="0">0 (Delete)</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -85,6 +84,7 @@ const ShoppingCartDescription = (props) => {
                 <option value="10">10+</option>
               </select>
             </button>
+            {onDelete(x)}
           </div>
         ))}
       </div>

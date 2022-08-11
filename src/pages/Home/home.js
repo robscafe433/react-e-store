@@ -68,8 +68,12 @@ function Home() {
   const onDelete = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
 
-    if (exist) {
+    if (exist.inCart === 0) {
+      console.log(
+        "Start of onDelete function - filtering out this individual product from cartItems."
+      );
       setCartItems(cartItems.filter((x) => x.id !== product.id));
+      console.log("After setCartItems to filter out his individual product");
     }
   };
 
