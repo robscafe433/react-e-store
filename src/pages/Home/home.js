@@ -1,4 +1,5 @@
 import "./home.css";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "../../components/Navbar/navbar.js";
 import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
@@ -100,11 +101,25 @@ function Home(props) {
         ) : (
           ""
         )}
-        {page === "home" ? (
-          <Categories storeData={storeData} setPage={setPage} /> // onAdd={onAdd}
-        ) : (
-          ""
-        )}
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={<Categories storeData={storeData} setPage={setPage} />}
+          />
+          <Route
+            path="/category/*"
+            element={
+              <Gallery
+                storeData={storeData}
+                page={page}
+                onAdd={onAdd}
+                setButtonDisable={setButtonDisable}
+                setShippingCost={setShippingCost}
+              />
+            }
+          />
+        </Routes>
       </div>
       {page !== "home" && page !== "cart" && page !== "thankyou" ? (
         <Gallery

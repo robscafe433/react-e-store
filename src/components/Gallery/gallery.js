@@ -26,7 +26,30 @@ const Gallery = (props) => {
     if (props.storeData) {
       let Allproducts = getAllProducts(props.storeData);
       galleryCards = Allproducts.map((product) => {
-        return <GalleryCard key={product.id} product={product} />;
+        return (
+          <GalleryCard
+            key={product.id}
+            product={product}
+            onAdd={props.onAdd}
+            setButtonDisable={props.setButtonDisable}
+            setShippingCost={props.setShippingCost}
+          />
+        );
+      });
+    }
+  } else {
+    if (props.storeData) {
+      let Allproducts = getAllProducts(props.storeData);
+      galleryCards = Allproducts.map((product) => {
+        return (
+          <GalleryCard
+            key={product.id}
+            product={product}
+            onAdd={props.onAdd}
+            setButtonDisable={props.setButtonDisable}
+            setShippingCost={props.setShippingCost}
+          />
+        );
       });
     }
   }
