@@ -6,7 +6,7 @@ import useFetch from "../../api/store";
 import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Checkout from "../Checkout/checkout";
 import ThankYou from "../ThankYou/thankyou";
@@ -65,16 +65,12 @@ function Home() {
     }
   };
 
-  const onDelete = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-
-    if (exist.inCart === 0) {
-      console.log(
-        "Start of onDelete function - filtering out this individual product from cartItems."
-      );
-      setCartItems(cartItems.filter((x) => x.id !== product.id));
-      console.log("After setCartItems to filter out his individual product");
-    }
+  const onDelete = () => {
+    cartItems.map((product) => {
+      if (product.inCart === 0) {
+        setCartItems(cartItems.filter((x) => x.id !== product.id));
+      }
+    });
   };
 
   function buttonBoolean() {
@@ -92,6 +88,7 @@ function Home() {
 
   return (
     <div>
+      {console.log(storeData)}
       <Navbar
         setPage={setPage}
         cartItems={cartItems}

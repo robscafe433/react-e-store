@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ShoppingCartDescription.css";
 import "./ShippingCost";
 
@@ -56,7 +56,6 @@ const ShoppingCartDescription = (props) => {
                 Shipped from: place of origin here
               </h6>
             </div>
-
             <div className="col-4 col-md-6 col-lg-3 font-small gen-text-alignment-right">
               <h4>${x.price.toFixed(2)}</h4>
             </div>
@@ -84,7 +83,7 @@ const ShoppingCartDescription = (props) => {
                 <option value="10">10+</option>
               </select>
             </button>
-            {onDelete(x)}
+            {onDelete()}
           </div>
         ))}
       </div>
