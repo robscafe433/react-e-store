@@ -1,16 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./ShoppingCartDescription.css";
 import "./ShippingCost";
 
 const ShoppingCartDescription = (props) => {
-  const {
-    cartItems,
-    onAdd,
-    onRemove,
-    onDelete,
-    onCartButtonChangeCount,
-    buttonBoolean,
-  } = props;
+  const { cartItems, onDelete, onCartButtonChangeCount } = props;
 
   return (
     <div className="col-12 col-md-7 col-lg-9">
@@ -44,7 +37,7 @@ const ShoppingCartDescription = (props) => {
                 src={x.image}
                 width="180"
                 height="180"
-                alt="image of products"
+                alt="product images"
               ></img>
             </div>
             <div className="col-6 col-md-6 col-lg-6 pt-4 pt-lg-0">
