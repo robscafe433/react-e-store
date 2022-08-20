@@ -111,7 +111,7 @@ function Home() {
       ) : (
         ""
       )}
-      {console.log(cartItems)}
+
       <div className="container">
         {page !== "cart" && page !== "thankyou" ? (
           <Banner setPage={setPage} />

@@ -5,6 +5,9 @@ import "./ShippingCost";
 const ShoppingCartDescription = (props) => {
   const { cartItems, onDelete, onCartButtonChangeCount } = props;
 
+  function test1() {
+    console.log("Testing function");
+  }
   return (
     <div className="col-12 col-md-7 col-lg-9">
       <div
@@ -59,6 +62,8 @@ const ShoppingCartDescription = (props) => {
                   const buttonItemCount = e.target.value;
                   const numButtonItemCount = parseFloat(buttonItemCount);
                   onCartButtonChangeCount(x, numButtonItemCount);
+                  test1();
+                  // onDelete();
                 }}
                 value={x.inCart}
               >
