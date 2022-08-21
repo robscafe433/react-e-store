@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 
 const Gallery = (props) => {
   const { name } = useParams();
-  console.log(">>>name", name);
   let galleryCards = [];
   let products = [];
   if (name) {
