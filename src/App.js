@@ -99,7 +99,10 @@ function App() {
           }
         />
         <Route path="/react-e-store/thankyou" element={<ThankYou />} />
-        <Route path="/react-e-store/category" element={<Gallery storeData={storeData} />} />
+        <Route
+          path="/react-e-store/category"
+          element={<Gallery storeData={storeData} />}
+        />
       </Routes>
     </Router>
   );

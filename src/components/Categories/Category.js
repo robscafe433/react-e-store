@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Category = (props) => {
-  // testing code console.log("propsinchild", props.item[0]);
   function titleCase(str) {
     return str.toLowerCase().replace(/\b(\w)/g, (s) => s.toUpperCase());
   }

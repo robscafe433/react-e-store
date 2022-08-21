@@ -8,37 +8,27 @@ const Gallery = (props) => {
   const { name } = useParams();
   console.log(">>>name", name);
   let galleryCards = [];
+  let products = [];
   if (name) {
     if (props.storeData) {
-      let products = getCategoryProducts(props.storeData, name);
-      galleryCards = products.map((product) => {
-        return (
-          <GalleryCard
-            key={product.id}
-            product={product}
-            onAdd={props.onAdd}
-            setButtonDisable={props.setButtonDisable}
-            setShippingCost={props.setShippingCost}
-          />
-        );
-      });
+      products = getCategoryProducts(props.storeData, name);
     }
   } else {
     if (props.storeData) {
-      let Allproducts = getAllProducts(props.storeData);
-      galleryCards = Allproducts.map((product) => {
-        return (
-          <GalleryCard
-            key={product.id}
-            product={product}
-            onAdd={props.onAdd}
-            setButtonDisable={props.setButtonDisable}
-            setShippingCost={props.setShippingCost}
-          />
-        );
-      });
+      products = getAllProducts(props.storeData);
     }
   }
+  galleryCards = products.map((product) => {
+    return (
+      <GalleryCard
+        key={product.id}
+        product={product}
+        onAdd={props.onAdd}
+        setButtonDisable={props.setButtonDisable}
+        setShippingCost={props.setShippingCost}
+      />
+    );
+  });
 
   return <div className="gallery">{galleryCards}</div>;
 };

@@ -1,7 +1,6 @@
 import "./galleryCard.css";
 
 const GalleryCard = (props) => {
-  // console.log(">>>>GalleryCardProps", props);
   let product = props.product;
   return (
     <div className="card m-4 gallery-card">
