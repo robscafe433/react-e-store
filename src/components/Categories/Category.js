@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Category = (props) => {
   // testing code console.log("propsinchild", props.item[0]);
@@ -10,12 +11,12 @@ const Category = (props) => {
       {/* <!-- cards 380 * 275 --> */}
       <div className="card mb-4 box-shadow">
         <img alt="images" className="card-hoverImg" src={props.item[1]} />
-        <button
-          className="image-overlay"
-          onClick={() => props.setPage(props.item[0])} // this returns: groceries, garden, household -rs
+        <Link
+          className="btn image-overlay"
+          to={"/react-e-store/category/" + props.item[0]}
         >
           <h3 className="card-hovertext mx-auto">{titleCase(props.item[0])}</h3>
-        </button>
+        </Link>
       </div>
     </div>
   );

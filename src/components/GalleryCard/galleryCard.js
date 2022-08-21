@@ -13,11 +13,11 @@ const GalleryCard = (props) => {
           className="add-cart btn btn-primary"
           href="#"
           data-id={product.id}
-          onClick={() => (
-            props.onAdd(product),
-            props.setButtonDisable(true),
-            props.setShippingCost("default")
-          )} // Produces individual object from each category -rs, ex: shovel,plant, etc...-rs
+          onClick={() => {
+            props.onAdd(product);
+            props.setButtonDisable(true);
+            props.setShippingCost("default");
+          }} // Produces individual object from each category -rs, ex: shovel,plant, etc...-rs
         >
           Add to Cart
         </button>

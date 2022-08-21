@@ -2,30 +2,16 @@ import "./gallery.css";
 import GalleryCard from "../GalleryCard/galleryCard";
 import { getCategoryProducts } from "../../helpers/storeHelpers";
 import { getAllProducts } from "../../helpers/storeHelpers";
+import { useParams } from "react-router-dom";
 
 const Gallery = (props) => {
-  // console.log(">>>GalleryProps", props);
+  const { name } = useParams();
+  console.log(">>>name", name);
   let galleryCards = [];
-  if (props.page !== "home" && props.page !== "all") {
+  if (name) {
     if (props.storeData) {
-      let products = getCategoryProducts(props.storeData, props.page);
+      let products = getCategoryProducts(props.storeData, name);
       galleryCards = products.map((product) => {
-        // console.log("These are getCategoryProducts: ", products);  // just  the three objects in each group -rs
-        return (
-          <GalleryCard
-            key={product.id}
-            product={product}
-            onAdd={props.onAdd}
-            setButtonDisable={props.setButtonDisable}
-            setShippingCost={props.setShippingCost}
-          />
-        );
-      });
-    }
-  } else if (props.page === "all") {
-    if (props.storeData) {
-      let Allproducts = getAllProducts(props.storeData);
-      galleryCards = Allproducts.map((product) => {
         return (
           <GalleryCard
             key={product.id}

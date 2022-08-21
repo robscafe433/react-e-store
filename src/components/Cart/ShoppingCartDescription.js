@@ -3,8 +3,10 @@ import "./ShoppingCartDescription.css";
 import "./ShippingCost";
 
 const ShoppingCartDescription = (props) => {
-  const { cartItems, onAdd, onRemove, onDelete, buttonBoolean } = props;
-
+  let { cartItems, onAdd, onRemove, onDelete, buttonBoolean } = props;
+  if (!cartItems) {
+    cartItems = [];
+  }
   return (
     <div className="col-12 col-md-7 col-lg-8">
       <div
@@ -48,7 +50,10 @@ const ShoppingCartDescription = (props) => {
                     className="btn btn-outline-secondary px-2 subtract-btn"
                     data-id={x.id}
                     data-name={x.name}
-                    onClick={() => (onRemove(x), buttonBoolean())}
+                    onClick={() => {
+                      onRemove(x);
+                      buttonBoolean();
+                    }}
                     type="button"
                   >
                     -
@@ -84,7 +89,10 @@ const ShoppingCartDescription = (props) => {
             <div className="col-2 col-md-1 col-lg-3">
               <button
                 className="delete-button"
-                onClick={() => (onDelete(x), buttonBoolean())}
+                onClick={() => {
+                  onDelete(x);
+                  buttonBoolean();
+                }}
               >
                 x
               </button>
