@@ -5,6 +5,7 @@ import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
 import Categories from "../../components/Categories/categories";
 import Gallery from "../../components/Gallery/gallery";
+import Payment from "../../pages/Payment/payment";
 
 import { useState } from "react";
 
@@ -139,6 +140,7 @@ function Home(props) {
       )}
 
       <Footer />
+      <Payment />
     </div>
   );
 }

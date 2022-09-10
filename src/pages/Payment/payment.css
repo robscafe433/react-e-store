@@ -1,0 +1,7 @@
+
+.cart-summary{
+    position: sticky;
+    bottom: 2rem;
+    align-self: flex-end;
+}
+
