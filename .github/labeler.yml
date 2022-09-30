@@ -1,5 +1,5 @@
-CSS:
-- *.css
-
-JS:
-- *.js
+--- 
+CSS: 
+  - src/**/*.css
+JS: 
+  - src/**/*.js
