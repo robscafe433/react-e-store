@@ -54,7 +54,7 @@ const Navbar = (props) => {
             <li className="nav-item">
               <Link
                 className="btn btn-link nav-link"
-                to="/react-e-store/category/checkout"
+                to="/react-e-store/checkout"
               >
                 Cart
               </Link>
