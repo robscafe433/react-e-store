@@ -40,10 +40,10 @@ function Payment(props) {
   //   setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
   //   console.log(contactInfo.value);
   // };
-  const handleChange = () => {
-    console.log("dsdddssd");
-    console.log(contactInfo);
-
+  const handleChange = (e) => {
+    setContactInfo(contactInfo => ({
+      ...contactInfo, [e.target.name]: e.target.value 
+    }));
   }
 
   const handleSubmit = (event) => {
@@ -64,6 +64,8 @@ function Payment(props) {
     expiration: "",
     ccv: "" });
   };
+
+
   return (
     <div class="container">
       <div class="py-5 text-center">
@@ -100,7 +102,7 @@ function Payment(props) {
                   class="form-control"
                   id="firsxtName"              
                   required
-                  onChange={() =>{ this.handleChange() }}
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <div class="invalid-feedback">
                   Valid first name is required.
