@@ -58,7 +58,7 @@ function Payment(props) {
     country: "",
     state: "",
     zip: "",
-    // paymentType: "",
+    paymentType: "",
     nameOnCard: "",
     CardNumber: "",
     expiration: "",
@@ -111,7 +111,6 @@ function Payment(props) {
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   type="text"
                   name="lastName"
                   placeholder="Last name"
@@ -119,6 +118,7 @@ function Payment(props) {
                   class="form-control"
                   id="lastName"
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <div class="invalid-feedback">Valid last name is required.</div>
               </div>
@@ -128,13 +128,13 @@ function Payment(props) {
                 Email <span class="text-muted">(Optional)</span>
               </label>
               <input
-                onChange={() =>{ this.handleChange() }}
                 type="email"
                 name="email"
                 placeholder="you@example.com"
                 // value={contactInfo.email}
                 class="form-control"
                 id="email"
+                onChange={(e) =>{ handleChange(e) }}
               />
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
@@ -152,6 +152,7 @@ function Payment(props) {
                 class="form-control"
                 id="address"
                 required
+                onChange={(e) =>{ handleChange(e) }}
               />
               <div class="invalid-feedback">
                 Please enter your shipping address.
@@ -163,13 +164,13 @@ function Payment(props) {
                 Address 2 <span class="text-muted">(Optional)</span>
               </label>
               <input
-                onChange={() =>{ this.handleChange() }}
                 type="text"
                 name="address2"                
                 placeholder="1234 Main St"
                 // value={contactInfo.address2}
                 class="form-control"
                 id="address2"
+                onChange={(e) =>{ handleChange(e) }}
               />
             </div>
             <div class="row">
@@ -180,9 +181,11 @@ function Payment(props) {
                   class="custom-select d-block w-100"
                   id="country"
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 >
-                  {/* <option value={contactInfo.country}>Choose...</option> */}
+                  <option >Choose...</option>
                   <option>United States</option>
+                  <option>Mexico</option>
                 </select>
                 <div class="invalid-feedback">
                   Please select a valid country.
@@ -191,7 +194,7 @@ function Payment(props) {
               <div class="col-md-4 mb-3">
                 <label for="state">State</label>
                 <select name="state" class="custom-select d-block w-100" id="state" required>
-                  {/* <option value={contactInfo.state}>Choose...</option> */}
+                  <option >Choose...</option>
                   <option>California</option>
                 </select>
                 <div class="invalid-feedback">
@@ -201,7 +204,6 @@ function Payment(props) {
               <div class="col-md-3 mb-3">
                 <label for="zip">Zip</label>
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   type="text"
                   name="zip"
                   placeholder=""
@@ -209,6 +211,7 @@ function Payment(props) {
                   class="form-control"
                   id="zip"
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <div class="invalid-feedback">Zip code required.</div>
               </div>
@@ -231,13 +234,14 @@ function Payment(props) {
             <div class="d-block my-3">
               <div class="custom-control custom-radio">
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   id="credit"
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
                   checked
                   required
+                  value="Credit card"
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <label class="custom-control-label" for="credit">
                   Credit card
@@ -245,12 +249,13 @@ function Payment(props) {
               </div>
               <div class="custom-control custom-radio">
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   id="debit"
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
                   required
+                  value="Credit card"
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <label class="custom-control-label" for="debit">
                   Debit card
@@ -258,12 +263,13 @@ function Payment(props) {
               </div>
               <div class="custom-control custom-radio">
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   id="paypal"
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
                   required
+                  value="PayPal"                  
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <label class="custom-control-label" for="paypal">
                   PayPal
@@ -274,7 +280,6 @@ function Payment(props) {
               <div class="col-md-6 mb-3">
                 <label for="cc-name">Name on card</label>
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   type="text"
                   name="nameOnCard"
                   placeholder=""
@@ -282,6 +287,7 @@ function Payment(props) {
                   class="form-control"
                   id="cc-name"                  
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <small class="text-muted">Full name as displayed on card</small>
                 <div class="invalid-feedback">Name on card is required</div>
@@ -289,7 +295,6 @@ function Payment(props) {
               <div class="col-md-6 mb-3">
                 <label for="cc-number">Credit card number</label>
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   type="text"
                   name="CardNumber"
                   placeholder=""
@@ -297,6 +302,7 @@ function Payment(props) {
                   class="form-control"
                   id="cc-number"                  
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <div class="invalid-feedback">
                   Credit card number is required
@@ -307,7 +313,6 @@ function Payment(props) {
               <div class="col-md-3 mb-3">
                 <label for="cc-expiration">Expiration</label>
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   type="text"
                   name="expiration"
                   placeholder=""
@@ -315,13 +320,13 @@ function Payment(props) {
                   class="form-control"
                   id="cc-expiration"                  
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <div class="invalid-feedback">Expiration date required</div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="cc-cvv">CVV</label>
                 <input
-                  onChange={() =>{ this.handleChange() }}
                   type="text"
                   name="ccv"
                   placeholder=""
@@ -329,6 +334,7 @@ function Payment(props) {
                   class="form-control"
                   id="cc-cvv"                  
                   required
+                  onChange={(e) =>{ handleChange(e) }}
                 />
                 <div class="invalid-feedback">Security code required</div>
               </div>
