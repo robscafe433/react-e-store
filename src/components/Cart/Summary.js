@@ -1,18 +1,21 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./Summary.css";
 import ShippingCost from "./ShippingCost";
 
 const Summary = (props) => {
-  const {
+  let {
     cartItems,
-    setPage,
     shippingCost,
     setShippingCost,
     cartItemsCount,
     setButtonDisable,
     buttonDisable,
   } = props;
+
+  if (!cartItems) {
+    cartItems = [];
+  }
 
   const runningItemsBalance = cartItems.reduce(
     (a, c) => a + c.inCart * c.price,
@@ -71,7 +74,14 @@ const Summary = (props) => {
       </div>
       <div className="row m-4">
         <div className="col-12 text-center">
-          <button
+          <Link
+            className="btn btn-dark btn-lg btn-block"
+            disabled={buttonDisable}
+            to={"/react-e-store/thankyou"}
+          >
+            Checkout
+          </Link>
+          {/* <button
             // onClick="document.location.href='./thankyou.html'"
             type="button"
             className="btn btn-dark btn-lg btn-block"
@@ -79,7 +89,7 @@ const Summary = (props) => {
             onClick={() => setPage("thankyou")}
           >
             Checkout
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

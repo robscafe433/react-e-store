@@ -1,17 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light rounded fixed-top">
-        {/* href needs react setup*/}
-        <button
-          className="btn btn-link navbar-brand"
-          href="index.html"
-          onClick={() => props.setPage("home")}
-        >
+        <Link className="btn btn-link navbar-brand" to="/react-e-store">
           Robert's One Stop Shop
-        </button>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -27,66 +23,50 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarsExample09">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              {/* href needs react setup*/}
-              <button
-                className="btn btn-link nav-link"
-                href="index.html"
-                onClick={() => props.setPage("home")}
-              >
-                Home <span className="sr-only">(current)</span>
-              </button>
+              <Link className="btn btn-link nav-link" to="/react-e-store">
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              {/* // onclicks href needs react setup*/}
-              <button
+              <Link
                 className="btn btn-link nav-link"
-                href="#"
-                onClick={() => props.setPage("groceries")}
+                to="/react-e-store/category/groceries"
               >
                 Groceries
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              {/* // onclicks href needs react setup*/}
-              <button
+              <Link
                 className="btn btn-link nav-link"
-                href="#"
-                onClick={() => props.setPage("household")}
+                to="/react-e-store/category/household"
               >
                 Household
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              {/* // onclicks href needs react setup*/}
-              <button
+              <Link
                 className="btn btn-link nav-link"
-                href="#"
-                onClick={() => props.setPage("garden")}
+                to="/react-e-store/category/garden"
               >
                 Garden
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
-              {/* // onclicks href needs react setup*/}
-              <button
+              <Link
                 className="btn btn-link nav-link"
-                href="#"
-                onClick={() => props.setPage("cart")}
+                to="/react-e-store/checkout"
               >
                 Cart
-              </button>
+              </Link>
             </li>
           </ul>
 
-          <button
-            // onclicks href needs react setup
-            // onclick="document.location.href='/'"
+          <Link
             className="cart btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-            onClick={() => props.setPage("cart")}
+            to="/react-e-store/checkout"
           >
             Cart <span>{props.cartItemsCount}</span>
-          </button>
+          </Link>
         </div>
       </nav>
     </header>

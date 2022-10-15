@@ -9,7 +9,6 @@ const Checkout = (props) => {
     onAdd,
     onRemove,
     onDelete,
-    setPage,
     shippingCost,
     setShippingCost,
     cartItemsCount,
@@ -31,7 +30,6 @@ const Checkout = (props) => {
           />
           <Summary
             cartItems={cartItems}
-            setPage={setPage}
             shippingCost={shippingCost}
             setShippingCost={setShippingCost}
             cartItemsCount={cartItemsCount}
