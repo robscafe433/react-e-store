@@ -1,5 +1,4 @@
 {
-  "server": "json-server --watch data/db.json --port 8000",
   "homepage": "http://robscafe433.github.io/react-e-store",
   "name": "react-e-store",
   "version": "0.1.0",
